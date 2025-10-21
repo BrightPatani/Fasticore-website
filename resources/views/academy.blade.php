@@ -35,7 +35,7 @@
 </div> 
 
     <!-- About the Internship Section  -->
-    <section class="relative -mt-56 sm:-mt-64 lg:-mt-72 pb-16 sm:pb-24 h-full">
+    <section class="relative -mt-40 sm:-mt-64 lg:-mt-72 pb-16 sm:pb-24 h-full">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-6xl mx-auto">
                 <div 

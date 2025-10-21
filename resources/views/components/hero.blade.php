@@ -1,9 +1,9 @@
 <section 
-    class="relative bg-[#FFFFFF] pb-16 sm:pt-30 sm:pb-24 md:pt-20 lg:pt-30 lg:pb-32 overflow-hidden bg-cover bg-center bg-no-repeat"
+    class="relative bg-[#FFFFFF] pt-24 pb-16 sm:pt-32 sm:pb-24 md:pt-36 lg:pt-40 lg:pb-32 overflow-hidden bg-cover bg-center bg-no-repeat"
     style="background-image: url('{{ asset('images/herobg.png') }}');"
 >    
-    <div class="container w-[90%] mx-auto px-8 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-4 items-center">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 gap-4 sm:gap-6 lg:gap-12 items-center">
             <!-- Left Column - Content -->
             <div 
                 class="max-w-xl"
@@ -14,23 +14,23 @@
                 x-transition:enter-end="opacity-100 transform translate-x-0"
             >
                 <!-- Main Heading -->
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                <h1 class="text-2xl sm:text-4xl lg:text-6xl font-bold leading-tight mb-3 sm:mb-4 lg:mb-6">
                     <span class="text-[#454452]">Where</span><br>
                     <span class="text-[#FF6701]">Strategy</span><br>
                     <span class="text-[#454452]">Meets</span><br>
-                    <span class="text-[#454452]">Execution</span>
+                    <span class="text-[#454452]">Execution.</span>
                 </h1>
                 
                 <!-- Description -->
-                <p class="text-base sm:text-lg text-[#454452] leading-relaxed mb-8 max-w-lg">
-                    — From tailored solutions to tech empowerment, Fasticore Technology  driven by excellence and customer satisfaction builds practical, scalable, and transformativeequips you with the skills, while our experts build the systems to scale your business
+                <p class="text-xs sm:text-sm lg:text-lg text-[#454452] leading-relaxed mb-4 sm:mb-6 lg:mb-8">
+                    From tailored solutions to tech empowerment, Fasticore Academy equips you with the skills, while our experts build the systems to scale your business
                 </p>
                 
                 <!-- CTA Button -->
                 <div>
                     <a 
                         href="{{ route('contact') }}" 
-                        class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-[#FFFFFF] bg-[#FF6701] rounded-full shadow-lg shadow-[#FF67014A] hover:bg-[#FF6701] hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                        class="inline-flex items-center justify-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 text-xs sm:text-sm lg:text-base font-semibold text-[#FFFFFF] bg-[#FF6701] rounded-full shadow-lg shadow-[#FF67014A] hover:bg-[#e55d01] hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF6701]"
                     >
                         Join us now
                     </a>
@@ -52,15 +52,15 @@
                     <div class="relative">
                         <img 
                             src="{{ asset('images/hero-professional.png') }}" 
-                            alt="hero image" 
-                            class="w-full h-auto object-cover rounded-lg pr-30"
+                            alt="Professional woman holding tablet" 
+                            class="w-full h-auto object-cover rounded-lg"
                             loading="eager">
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Bottom Gradient Fade -->
-        <div class="absolute bottom-0 left-0 right-0 h-[400px] bg-gradient-to-t from-white to-transparent z-10"></div>
     </div>
     
+    <!-- Bottom Gradient Fade -->
+    <div class="absolute bottom-0 left-0 right-0 h-32 sm:h-64 lg:h-96 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
 </section>

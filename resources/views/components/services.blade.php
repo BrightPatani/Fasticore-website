@@ -1,4 +1,4 @@
-<section class="py-4 sm:py-20 lg:py-24 bg-[#FFFFFF]">
+<section class="py-4 w-[90%] mx-auto sm:py-20 lg:py-24 bg-[#FFFFFF]">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Section Header -->
@@ -20,7 +20,7 @@
                 services: [
                     {
                         title: 'Trainings',
-                        description: 'Our academy develops excellent talents in product design, data analysis,  frontend, backend and mobile development who design, build, and maintain Solutions/products.',
+                        description: 'Our academy develops excellent talents in product design, data analysis,  frontend, backend and mobile development who design, build, and maintain Solutions/products.',
                         icon: 'training'
                     },
                     {
@@ -97,27 +97,48 @@
                     <!-- Service Cards -->
                     <template x-for="(service, index) in services" :key="index">
                         <div 
-                            class="w-full h-80 sm:w-1/2 lg:w-1/3 xl:w-1/4 flex-shrink-0 px-3 cursor-grab active:cursor-grabbing"
+                            class="w-full pb-12 sm:w-1/2 lg:w-1/3 xl:w-1/4 flex-shrink-0 px-3 cursor-grab active:cursor-grabbing"
+                            style="height: 420px;"
                             x-data="{ hover: false }"
                             @mouseenter="hover = true"
                             @mouseleave="hover = false"
                         >
                             <div 
-                                class="relative bg-white rounded-2xl shadow-md p-8  overflow-hidden h-full transition-all duration-300"
-                                :class="hover ? 'transform -translate-y-2 shadow-lg' : ''"
+                                class="relative bg-[#FFFFFF] rounded-2xl shadow-xl p-8 overflow-hidden h-full transition-all duration-300"
+                                :class="hover ? 'transform -translate-y-2 shadow-xl' : ''"
                             >
-                                <!-- Title -->
-                                <h3 class="text-xl font-semibold text-[#454452] mb-3" x-text="service.title"></h3>
+                                <!-- Blue Background Overlay (slides in from right) -->
+                                <div 
+                                    class="absolute inset-0 bg-[#003686] transition-transform duration-500 ease-out z-0"
+                                    :class="hover ? 'translate-x-0' : '-translate-x-full'"
+                                ></div>
 
-                                <!-- Description -->
-                                <p class="text-[#454452] text-md leading-relaxed" x-text="service.description"></p>
+                                <!-- Content Wrapper (relative positioning to stay above overlay) -->
+                                <div class="relative z-10 h-full flex flex-col">
+                                    <!-- Title -->
+                                    <h3 
+                                        class="text-xl font-semibold mb-3 transition-colors duration-300"
+                                        :class="hover ? 'text-[#FFFFFF]' : 'text-[#454452]'"
+                                        x-text="service.title"
+                                    ></h3>
 
-                                <!-- Bottom-Right Icon (faint) -->
-                                <img 
-                                    :src="'{{ asset('images') }}/icons/' + service.icon + '.png'" 
-                                    :alt="service.title + ' Icon'"
-                                    class="absolute bottom-4 right-4 w-16 h-16 select-none pointer-events-none object-contain"
-                                >
+                                    <!-- Description -->
+                                    <p 
+                                        class="text-md leading-relaxed flex-grow transition-colors duration-300"
+                                        :class="hover ? 'text-[#FFFFFF]' : 'text-[#454452]'"
+                                        x-text="service.description"
+                                    ></p>
+
+                                    <!-- Bottom-Right Icon -->
+                                    <div class="flex justify-end mt-4">
+                                        <img 
+                                            :src="'{{ asset('images') }}/icons/' + service.icon + '.png'" 
+                                            :alt="service.title + ' Icon'"
+                                            class="w-24 h-24 select-none pointer-events-none object-contain transition-opacity duration-300"
+                                            :class="hover ? 'opacity-80' : 'opacity-100'"
+                                        >
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </template>
@@ -126,3 +147,13 @@
         </div>
     </div>
 </section>
+
+<style>
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>

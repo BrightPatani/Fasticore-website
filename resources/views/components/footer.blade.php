@@ -2,11 +2,11 @@
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Main Footer Content -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 mb-12 ">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16 mb-12">
             
             <!-- Column 1: Contact Form -->
-            <div class="p-6 shadow-lg rounded-lg border-2 border-[#f5f5f5]">
-                <h3 class="text-2xl font-bold text-[#454452] mb-6">
+            <div class="p-6 shadow-lg rounded-lg border-2 border-[#f5f5f5] max-w-md mx-auto lg:mx-0 w-full">
+                <h3 class="text-xl sm:text-2xl font-bold text-[#454452] mb-6">
                     Contact us
                 </h3>
                 
@@ -14,12 +14,11 @@
                 <form 
                     action="{{ route('contact.submit') }}" 
                     method="POST"
-                    class="space-y-6"
+                    class="space-y-4"
                     x-data="{ 
                         loading: false,
                         submitForm(e) {
                             this.loading = true;
-            
                         }
                     }"
                     @submit.prevent="submitForm"
@@ -33,7 +32,7 @@
                             name="name" 
                             placeholder="Your Name"
                             required
-                            class="w-full px-4 py-3 bg-[#F5F5F5] border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                            class="w-full px-4 py-3 bg-[#F5F5F5] border border-gray-200 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-[#003686] focus:border-transparent transition-all"
                         >
                     </div>
                     
@@ -44,7 +43,7 @@
                             name="email" 
                             placeholder="Your Email"
                             required
-                            class="w-full px-4 py-3 bg-[#F5F5F5] border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                            class="w-full px-4 py-3 bg-[#F5F5F5] border border-gray-200 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-[#003686] focus:border-transparent transition-all"
                         >
                     </div>
                     
@@ -53,9 +52,9 @@
                         <textarea 
                             name="message" 
                             placeholder="Your Message"
-                            rows="4"
+                            rows="3"
                             required
-                            class="w-full px-4 py-3 bg-[#F5F5F5] border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
+                            class="w-full px-4 py-3 bg-[#F5F5F5] border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#003686] focus:border-transparent transition-all resize-none"
                         ></textarea>
                     </div>
                     
@@ -64,7 +63,7 @@
                         <button 
                             type="submit"
                             :disabled="loading"
-                            class="w-full px-8 py-3 bg-[#003686] text-white font-semibold rounded-lg hover:bg-[#003686] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#003686] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                            class="w-full px-8 py-3 bg-[#003686] text-white font-semibold rounded-full hover:bg-[#002a6b] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#003686] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                             <span x-show="!loading">Send</span>
                             <span x-show="loading" x-cloak>Sending...</span>
@@ -73,9 +72,74 @@
                 </form>
             </div>
             
-            <!-- Column 2: Contact Information -->
-            <div class="flex flex-col justify-center items-center text-center space-y-4">
-                
+            <!-- Mobile: Contact Info and Pages Side by Side -->
+            <div class="lg:hidden grid grid-cols-2 gap-8">
+                <!-- Contact Information Column -->
+                <div class="flex flex-col space-y-6">
+                    <!-- Location -->
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mb-2">
+                            <svg class="w-5 h-5 text-[#454452]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </div>
+                        <p class="text-[#454452] text-xs">Remote</p>
+                    </div>
+                    
+                    <!-- Phone -->
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mb-2">
+                            <svg class="w-5 h-5 text-[#454452]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <a href="tel:+17039661249" class="text-[#454452] text-xs hover:text-[#003686] transition-colors">
+                            (703) 966-1249
+                        </a>
+                    </div>
+                    
+                    <!-- Email -->
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mb-2">
+                            <svg class="w-5 h-5 text-[#454452]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <a href="mailto:fasticore@gmail.com" class="text-[#454452] text-xs hover:text-[#003686] transition-colors break-all">
+                            fasticore@gmail.com
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Pages Menu Column -->
+                <div class="flex flex-col">
+                    <h4 class="text-lg font-bold text-[#454452] mb-4">
+                        Pages
+                    </h4>
+                    
+                    <nav class="space-y-3">
+                        <a href="{{ route('home') }}" class="block text-[#454452] text-sm hover:text-[#003686] transition-colors">
+                            Home
+                        </a>
+                        <a href="{{ route('services') }}" class="block text-[#454452] text-sm hover:text-[#003686] transition-colors">
+                            Services
+                        </a>
+                        <a href="{{ route('solutions') }}" class="block text-[#454452] text-sm hover:text-[#003686] transition-colors">
+                            Solutions
+                        </a>
+                        <a href="{{ route('about') }}" class="block text-[#454452] text-sm hover:text-[#003686] transition-colors">
+                            About us
+                        </a>
+                        <a href="{{ route('contact') }}" class="block text-[#454452] text-sm hover:text-[#003686] transition-colors">
+                            Contact
+                        </a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Desktop: Contact Information (Column 2) -->
+            <div class="hidden lg:flex flex-col justify-center items-center text-center space-y-6">
                 <!-- Location -->
                 <div class="flex flex-col items-center">
                     <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-3">
@@ -94,7 +158,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
                         </svg>
                     </div>
-                    <a href="tel:+17039661249" class="text-[#454452] text-sm hover:text-primary transition-colors">
+                    <a href="tel:+17039661249" class="text-[#454452] text-sm hover:text-[#003686] transition-colors">
                         (703) 966-1249
                     </a>
                 </div>
@@ -106,54 +170,53 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
                     </div>
-                    <a href="mailto:fasticore@gmail.com" class="text-[#454452] text-sm hover:text-primary transition-colors">
+                    <a href="mailto:fasticore@gmail.com" class="text-[#454452] text-sm hover:text-[#003686] transition-colors">
                         fasticore@gmail.com
                     </a>
                 </div>
             </div>
             
-            <!-- Column 3: Pages Menu -->
-            <div class="flex flex-col justify-center lg:items-end">
+            <!-- Desktop: Pages Menu (Column 3) -->
+            <div class="hidden lg:flex flex-col justify-center lg:items-end">
                 <div>
                     <h4 class="text-xl font-bold text-[#454452] mb-6">
                         Pages
                     </h4>
                     
                     <nav class="space-y-3">
-                        <a href="{{ route('home') }}" class="block text-[#454452] hover:text-primary transition-colors">
+                        <a href="{{ route('home') }}" class="block text-[#454452] hover:text-[#003686] transition-colors">
                             Home
                         </a>
-                        <a href="{{ route('services') }}" class="block text-[#454452] hover:text-primary transition-colors">
+                        <a href="{{ route('services') }}" class="block text-[#454452] hover:text-[#003686] transition-colors">
                             Services
                         </a>
-                        <a href="{{ route('solutions') }}" class="block text-[#454452] hover:text-primary transition-colors">
+                        <a href="{{ route('solutions') }}" class="block text-[#454452] hover:text-[#003686] transition-colors">
                             Solutions
                         </a>
-                        <a href="{{ route('about') }}" class="block text-[#454452] hover:text-primary transition-colors">
+                        <a href="{{ route('about') }}" class="block text-[#454452] hover:text-[#003686] transition-colors">
                             About us
                         </a>
-                        <a href="{{ route('contact') }}" class="block text-[#454452] hover:text-primary transition-colors">
+                        <a href="{{ route('contact') }}" class="block text-[#454452] hover:text-[#003686] transition-colors">
                             Contact
                         </a>
                     </nav>
                 </div>
             </div>
-            
         </div>
         
-
+        <!-- Divider -->
+        <div class="border-t border-gray-200 my-8"></div>
         
         <!-- Bottom Footer Bar -->
-        <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-[#454452]">
-            
-            <!-- Social Media Icons -->
-            <div class="flex items-center space-x-4">
+        <div class="pb-8">
+            <!-- Social Media Icons (Top on mobile, left on desktop) -->
+            <div class="flex items-center justify-center lg:justify-start space-x-4 mb-6">
                 <!-- Facebook -->
                 <a 
                     href="https://facebook.com/fasticore" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    class="w-10 h-10 bg-[#003686] rounded-full flex items-center justify-center hover:bg-[#003686] transition-colors"
+                    class="w-10 h-10 bg-[#003686] rounded-full flex items-center justify-center hover:bg-[#002a6b] transition-colors"
                 >
                     <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
@@ -184,30 +247,36 @@
                     </svg>
                 </a>
             </div>
-            <div class="text-center md:text-left">
-                <p class="mb-1">
+
+            <!-- Trademark Text -->
+            <div class="text-center lg:text-left mb-4">
+                <p class="text-[#454452] text-xs sm:text-sm">
                     Fasticore Platform are trademarks from Fasticore Technology
                 </p>
             </div>
 
-            
             <!-- Legal Links -->
-            <div class="flex items-center space-x-6">
-                <a href="{{ route('terms') }}" class="hover:text-primary transition-colors">
+            <div class="flex items-center justify-center lg:justify-start space-x-6 mb-4">
+                <a href="{{ route('terms') }}" class="text-[#454452] text-xs sm:text-sm hover:text-[#003686] transition-colors">
                     Terms of use
                 </a>
-                <a href="{{ route('privacy') }}" class="hover:text-primary transition-colors">
+                <a href="{{ route('privacy') }}" class="text-[#454452] text-xs sm:text-sm hover:text-[#003686] transition-colors">
                     Privacy policy
                 </a>
             </div>
-        </div>
-            <!-- Divider -->
-            <div class="border-t border-[#454552] my-8"></div>
-            <!-- Copyright & Company Info -->
-            <div class="text-center">
-                <p>
+
+            <!-- Copyright -->
+            <div class="text-center lg:text-left">
+                <p class="text-[#454452] text-xs sm:text-sm">
                     © Copyright by Fasticore Technology – All right reserved
                 </p>
             </div>
+        </div>
     </div>
 </footer>
+
+<style>
+    [x-cloak] { 
+        display: none !important; 
+    }
+</style>

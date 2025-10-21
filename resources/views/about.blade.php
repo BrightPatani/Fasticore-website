@@ -35,36 +35,40 @@
 
 </div> 
 
-<!-- Story Section -->
-<section class="relative -mt-64 sm:-mt-64 pb-16 sm:pb-24">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-5xl mx-auto">
-            <div class="backdrop-blur-md bg-[#454452] rounded-2xl shadow-2xl p-8 sm:p-12 lg:p-16">
-                <h2 class="text-3xl text-[#ffffff] sm:text-4xl lg:text-5xl font-bold mb-8">
-                    Our Story
-                </h2>
-                <p class="text-[#ffffff] leading-relaxed text-base sm:text-lg">
-                    Fasticore Technology began in September 2021 with a vision to build meaningful
-                    solutions while serving businesses and training talents. What started as a small
-                    training initiative with five students quickly grew into larger partnerships,
-                    including training over 150 students with ELabsafrica in 2023. Later that year, we
-                    formally incorporated as Fasticore Technology Limited. By 2024, our focus shifted
-                    to talent development and creating AI-powered business solutions. Now, we build
-                    practical, scalable, and impactful AI solutions for Africa, supported by a talent
-                    pipeline from our academy and validated through real-world client services.
-                </p>
+    <!-- Story Section -->
+    <section class="relative -mt-30 sm:-mt-40  lg:-mt-64 pb-12 sm:pb-20 lg:pb-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto bg-[#FFFFFF]">
+                <div 
+                    class="backdrop-blur-md bg-[#454452] rounded-2xl shadow-2xl 
+                        p-6 sm:p-10 lg:p-16 mt-0 sm:-mt-40 lg:-mt-64"
+                >
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-[#ffffff]">
+                        Our Story
+                    </h2>
+                    <p class="text-[#ffffff] leading-relaxed text-sm sm:text-base lg:text-lg">
+                        Fasticore Technology began in September 2021 with a vision to build meaningful
+                        solutions while serving businesses and training talents. What started as a small
+                        training initiative with five students quickly grew into larger partnerships,
+                        including training over 150 students with ELabsafrica in 2023. Later that year, we
+                        formally incorporated as Fasticore Technology Limited. By 2024, our focus shifted
+                        to talent development and creating AI-powered business solutions. Now, we build
+                        practical, scalable, and impactful AI solutions for Africa, supported by a talent
+                        pipeline from our academy and validated through real-world client services.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
 
 {{-- our core values --}}
-<section class="py-16 sm:py-20 lg:py-24 bg-[#FFFFFF]">
+<section class="py-16 sm:py-20 lg:py-24 bg-[]">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-            <h2 class="text-3xl text-left text-[#454452] sm:text-4xl lg:text-5xl font-bold text-[#454452] mb-4">
+            <h2 class="text-3xl text-left text-[#454452] sm:text-4xl lg:text-5xl font-bold mb-4">
                 Our Core <span class="text-[#FF6701]">Values</span>
             </h2>
             <p class="text-left sm:text-lg text-[#454452] leading-relaxed">
@@ -86,7 +90,7 @@
                     },
                     {
                         title: 'Innovation',
-                        description: 'We embrace effective creativity when building that ensures our solutions/ products  stand out and exceed expectations.',
+                        description: 'We embrace effective creativity when building that ensures our solutions/products stand out and exceed expectations.',
                         icon: 'innovation'
                     },
                     {
@@ -96,7 +100,7 @@
                     },
                     {
                         title: 'Integrity',
-                        description: 'Transparency and trust is how we build, teach, and serve. We always deliver as promised',
+                        description: 'Transparency and trust is how we build, teach, and serve. We always deliver as promised.',
                         icon: 'Integrity'
                     },
                     {
@@ -141,28 +145,49 @@
                     <!-- Value Cards -->
                     <template x-for="(value, index) in values" :key="index">
                         <div 
-                            class="w-full h-80 sm:w-1/2 lg:w-1/3 xl:w-1/4 flex-shrink-0 px-8 cursor-grab active:cursor-grabbing"
+                            class="w-full pb-12 sm:w-1/2 lg:w-1/3 xl:w-1/4 flex-shrink-0 px-3 cursor-grab active:cursor-grabbing"
+                            style="height: 420px;"
                             x-data="{ hover: false }"
                             @mouseenter="hover = true"
                             @mouseleave="hover = false"
                         >
                             <div 
-                                class="relative bg-[#FFFFFF] rounded-2xl shadow-md p-8 overflow-hidden h-full transition-all duration-300"
-                                :class="hover ? 'transform -translate-y-2 shadow-lg' : ''"
+                                class="relative bg-[#FFFFFF] rounded-2xl shadow-xl p-8 overflow-hidden h-full transition-all duration-300"
+                                :class="hover ? 'transform -translate-y-2 shadow-xl' : ''"
                             >
-                                <!-- Title -->
-                                <h3 class="text-xl font-semibold text-gray-800 mb-3" x-text="value.title"></h3>
+                                <!-- Blue Background Overlay (slides in from left) -->
+                                <div 
+                                    class="absolute inset-0 bg-[#003686] transition-transform duration-500 ease-out z-0"
+                                    :class="hover ? 'translate-x-0' : '-translate-x-full'"
+                                ></div>
 
-                                <!-- Description -->
-                                <p class="text-[#454452] text-md leading-relaxed" x-text="value.description"></p>
+                                <!-- Content Wrapper -->
+                                <div class="relative z-10 h-full flex flex-col">
+                                    <!-- Title -->
+                                    <h3 
+                                        class="text-xl font-semibold mb-3 transition-colors duration-300"
+                                        :class="hover ? 'text-[#FFFFFF]' : 'text-[#454452]'"
+                                        x-text="value.title"
+                                    ></h3>
 
-                               <!-- Faint Icon -->
-                                <img 
-                                    :src="'{{ asset('images/values') }}/' + value.icon + '.png'" 
-                                    :alt="value.title + ' Icon'"
-                                    class="absolute bottom-4 right-4 w-16 h-16 mt-16 select-none pointer-events-none object-contain"
-                                />
+                                    <!-- Description -->
+                                    <p 
+                                        class="text-md leading-relaxed flex-grow transition-colors duration-300"
+                                        :class="hover ? 'text-[#FFFFFF]' : 'text-[#454452]'"
+                                        x-text="value.description"
+                                    ></p>
 
+                                    <!-- Icon (bottom-right) -->
+                                    <div class="flex justify-end mt-4">
+                                        <img 
+                                            :src="'{{ asset('images/values') }}/' + value.icon + '.png'" 
+                                            :alt="value.title + ' Icon'"
+                                            class="w-24 h-24 select-none pointer-events-none object-contain transition-opacity duration-300"
+                                            :class="hover ? 'opacity-80' : 'opacity-100'"
+                                        >
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </template>
                 </div>
@@ -171,25 +196,39 @@
     </div>
 </section>
 
+<style>
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+
+
 <!-- Our Key Strength Section -->
-<section class="mx-auto py-16 sm:py-20 lg:py-24 bg-[#454452]">
-    <div class="container align-center mx-auto px-4 sm:px-6 lg:px-8">
+<section class="py-16 sm:py-20 lg:py-24 bg-[#454452]">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Section Heading -->
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#FFFFFF] mb-12 sm:mb-16">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#FFFFFF] mb-8 sm:mb-12 lg:mb-16">
             Our Key <span class="text-[#FF6701]">Strength</span>
         </h2>
 
         <!-- Strength Cards Grid -->
-       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto justify-items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
+            
             <!-- Card 1: Full Stack Enterprise -->
-            <div class="bg-[#454452] rounded-bl p-8 sm:p-10 lg:p-12 shadow-2xl shadow-[#000000]">
-                <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+            <div 
+                class="bg-[#5A5A6B] rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg"
+                x-data="{ visible: false }"
+                x-intersect="visible = true"
+                x-transition:enter="transition ease-out duration-700"
+                x-transition:enter-start="opacity-0 transform -translate-y-8"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+            >
+                <div class="flex items-start justify-between gap-4">
                     <!-- Left Side: Text Content -->
-                    <div class="flex-1 max-w-md">
-                        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#FFFFFF] mb-6">
+                    <div class="flex-1">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-[#FFFFFF] mb-3 sm:mb-4">
                             Full Stack Enterprise
                         </h3>
-                        <p class="text-[#FFFFFF] text-base sm:text-lg leading-relaxed">
+                        <p class="text-[#E5E5E5] text-sm sm:text-base leading-relaxed">
                             From frontend interfaces to backend infrastructure, our team masters the complete technology stack for comprehensive solutions.
                         </p>
                     </div>
@@ -199,21 +238,28 @@
                         <img 
                             src="{{ asset('images/icons/fullstack.png') }}" 
                             alt="Full Stack Enterprise Icon" 
-                            class="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48"
+                            class="w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 object-contain"
                         >
                     </div>
                 </div>
             </div>
             
             <!-- Card 2: Scalable Architecture -->
-            <div class="bg-[#454452] rounded-bl-2xl rounded-tr-2xl rounded-tl-xl rounded-br-xl p-8 sm:p-10 lg:p-12 shadow-2xl shadow-[#000000]">
-                <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+            <div 
+                class="bg-[#5A5A6B] rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg"
+                x-data="{ visible: false }"
+                x-intersect="visible = true"
+                x-transition:enter="transition ease-out duration-700 delay-100"
+                x-transition:enter-start="opacity-0 transform -translate-y-8"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+            >
+                <div class="flex items-start justify-between gap-4">
                     <!-- Left Side: Text Content -->
-                    <div class="flex-1 max-w-md">
-                        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#FFFFFF] mb-6">
+                    <div class="flex-1">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-[#FFFFFF] mb-3 sm:mb-4">
                             Scalable Architecture
                         </h3>
-                        <p class="text-[#FFFFFF] text-base sm:text-lg leading-relaxed">
+                        <p class="text-[#E5E5E5] text-sm sm:text-base leading-relaxed">
                             We design systems that grow with your business, ensuring your technology investments remain valuable as you scale.
                         </p>
                     </div>
@@ -222,22 +268,29 @@
                     <div class="flex-shrink-0">
                         <img 
                             src="{{ asset('images/icons/scalable.png') }}" 
-                            alt="Full Stack Enterprise Icon" 
-                            class="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48"
+                            alt="Scalable Architecture Icon" 
+                            class="w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 object-contain"
                         >
                     </div>
                 </div>
             </div>
 
-            <!-- Card 3: cross platform development -->
-            <div class="bg-[#454452] rounded-bl-2xl rounded-tr-2xl rounded-tl-xl rounded-br-xl p-8 sm:p-10 lg:p-12 shadow-2xl shadow-[#000000]">
-                <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+            <!-- Card 3: Cross Platform Development -->
+            <div 
+                class="bg-[#5A5A6B] rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg"
+                x-data="{ visible: false }"
+                x-intersect="visible = true"
+                x-transition:enter="transition ease-out duration-700 delay-200"
+                x-transition:enter-start="opacity-0 transform -translate-y-8"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+            >
+                <div class="flex items-start justify-between gap-4">
                     <!-- Left Side: Text Content -->
-                    <div class="flex-1 max-w-md">
-                        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#FFFFFF] mb-6">
+                    <div class="flex-1">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-[#FFFFFF] mb-3 sm:mb-4">
                             Cross Platform Development
                         </h3>
-                        <p class="text-[#FFFFFF] text-base sm:text-lg leading-relaxed">
+                        <p class="text-[#E5E5E5] text-sm sm:text-base leading-relaxed">
                             From frontend interfaces to backend infrastructure, our team masters the complete technology stack for comprehensive solutions.
                         </p>
                     </div>
@@ -246,32 +299,39 @@
                     <div class="flex-shrink-0">
                         <img 
                             src="{{ asset('images/icons/cross.png') }}" 
-                            alt="Full Stack Enterprise Icon" 
-                            class="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48"
+                            alt="Cross Platform Development Icon" 
+                            class="w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 object-contain"
                         >
                     </div>
                 </div>
             </div>
 
-            {{-- card 4: Cloud Native Solution --}}
-                        <div class="bg-[#454452] rounded-bl-2xl rounded-tr-2xl rounded-tl-xl rounded-br-xl p-8 sm:p-10 lg:p-12 shadow-2xl shadow-[#000000]">
-                <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+            <!-- Card 4: Cloud Native Solution -->
+            <div 
+                class="bg-[#5A5A6B] rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg"
+                x-data="{ visible: false }"
+                x-intersect="visible = true"
+                x-transition:enter="transition ease-out duration-700 delay-300"
+                x-transition:enter-start="opacity-0 transform -translate-y-8"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+            >
+                <div class="flex items-start justify-between gap-4">
                     <!-- Left Side: Text Content -->
-                    <div class="flex-1 max-w-md">
-                        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#FFFFFF] mb-6">
-                             Cloud Native Solution
+                    <div class="flex-1">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-[#FFFFFF] mb-3 sm:mb-4">
+                            Cloud Native Solution
                         </h3>
-                        <p class="text-[#FFFFFF] text-base sm:text-lg leading-relaxed">
+                        <p class="text-[#E5E5E5] text-sm sm:text-base leading-relaxed">
                             We leverage modern cloud technologies to build resilient, efficient, and cost-effective applications that perform at scale.
                         </p>
                     </div>
 
-                    <!-- Right Side: image -->
+                    <!-- Right Side: Icon -->
                     <div class="flex-shrink-0">
                         <img 
                             src="{{ asset('images/icons/cloud.png') }}" 
-                            alt="Full Stack Enterprise Icon" 
-                            class="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48"
+                            alt="Cloud Native Solution Icon" 
+                            class="w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 object-contain"
                         >
                     </div>
                 </div>
@@ -524,286 +584,397 @@
     </div>
 </section>
 
-<!-- Testimonials Section -->
-<section class="py-16 sm:py-20 lg:py-24 bg-[#FFFFFF]">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Section Header -->
-        <div class="mb-12">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#454452]">
-                What Our Client Says
-            </h2>
-        </div>
-
-        <!-- Testimonials Grid -->
-        <div class="max-w-6xl mx-auto">
+    <!-- Testimonials Section -->
+    <section class="py-16 sm:py-20 lg:py-24 bg-[#FFFFFF]">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- First Row: 2 Testimonials -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <!-- Section Header -->
+            <div class="mb-8 sm:mb-12">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#454452]">
+                    What Our Client Says
+                </h2>
+            </div>
+
+            <!-- Testimonials Container -->
+            <div class="max-w-6xl mx-auto">
                 
-                <!-- Testimonial 1: Andrew Davis -->
-                <div 
-                    class="group relative bg-[#FFFFFF] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border-l-4 border-primary"
-                    x-data="{ visible: false }"
-                    x-intersect="visible = true"
-                    x-transition:enter="transition ease-out duration-700"
-                    x-transition:enter-start="opacity-0 transform -translate-y-8"
-                    x-transition:enter-end="opacity-100 transform translate-y-0"
-                >
-                    <!-- Quote Icon -->
-                    <div class="absolute top-6 right-6 text-primary opacity-10">
-                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                        </svg>
-                    </div>
-
-                    <!-- Testimonial Text -->
-                    <p class="text-[#454452] text-base leading-relaxed mb-8 relative z-10">
-                        "The mobile app Fasticore developed for us has significantly improved our customer engagement. The user interface is intuitive, and the performance is outstanding. Their post-launch support has been exceptional."
-                    </p>
-
-                    <!-- Client Info -->
-                    <div class="flex items-center">
-                        <!-- Avatar -->
-                        <div class="w-14 h-14 rounded-full overflow-hidden bg-gradient-to-br from-blue-200 to-blue-400 flex-shrink-0 border-2 border-[#FFFFFF] shadow-md">
-                            <img 
-                                src="{{ asset('images/testimonials/andrew-davis.jpg') }}" 
-                                alt="Andrew Davis" 
-                                class="w-full h-full object-cover"
-                            >
-                        </div>
+                <!-- Mobile: Single Column, Desktop: Grid Layout -->
+                <div class="space-y-6 md:space-y-0">
+                    
+                    <!-- First Row on Desktop: 2 Testimonials -->
+                    <div class="md:grid md:grid-cols-2 md:gap-8 md:mb-8 space-y-6 md:space-y-0">
                         
-                        <!-- Name & Title -->
-                        <div class="ml-4">
-                            <h4 class="text-[#454452] font-bold text-lg">
-                                Andrew Davis
-                            </h4>
-                            <p class="text-[#454452] text-sm">
-                                CTO, Retail Max
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2: Lisa Johnson -->
-                <div 
-                    class="group relative bg-[#FFFFFF] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border-l-4 border-primary"
-                    x-data="{ visible: false }"
-                    x-intersect="visible = true"
-                    x-transition:enter="transition ease-out duration-700 delay-100"
-                    x-transition:enter-start="opacity-0 transform -translate-y-8"
-                    x-transition:enter-end="opacity-100 transform translate-y-0"
-                >
-                    <!-- Quote Icon -->
-                    <div class="absolute top-6 right-6 text-primary opacity-10">
-                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                        </svg>
-                    </div>
-
-                    <!-- Testimonial Text -->
-                    <p class="text-[#454452] text-base leading-relaxed mb-8 relative z-10">
-                        "Working with Fasticore has been a game-changer for our startup. They not only built an amazing product but also provided valuable insights that helped shape our business strategy. Highly recommended!"
-                    </p>
-
-                    <!-- Client Info -->
-                    <div class="flex items-center">
-                        <!-- Avatar -->
-                        <div class="w-14 h-14 rounded-full overflow-hidden bg-gradient-to-br from-pink-200 to-pink-400 flex-shrink-0 border-2 border-[#FFFFFF] shadow-md">
-                            <img 
-                                src="{{ asset('images/testimonials/lisa-johnson.jpg') }}" 
-                                alt="Lisa Johnson" 
-                                class="w-full h-full object-cover"
-                            >
-                        </div>
-                        
-                        <!-- Name & Title -->
-                        <div class="ml-4">
-                            <h4 class="text-[#454452] font-bold text-lg">
-                                Lisa Johnson
-                            </h4>
-                            <p class="text-[#454452] text-sm">
-                                Founder, InnovativeLabs
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Second Row: 1 Centered Testimonial -->
-            <div class="flex justify-center">
-                <div 
-                    class="w-full md:w-2/3 lg:w-1/2"
-                    x-data="{ visible: false }"
-                    x-intersect="visible = true"
-                    x-transition:enter="transition ease-out duration-700 delay-200"
-                    x-transition:enter-start="opacity-0 transform -translate-y-8"
-                    x-transition:enter-end="opacity-100 transform translate-y-0"
-                >
-                    <!-- Testimonial 3: Robert Martinez -->
-                    <div class="group relative bg-[#FFFFFF] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border-l-4 border-primary">
-                        
-                        <!-- Quote Icon -->
-                        <div class="absolute top-6 right-6 text-primary opacity-10">
-                            <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                            </svg>
-                        </div>
-
-                        <!-- Testimonial Text -->
-                        <p class="text-[#454452] text-base leading-relaxed mb-8 relative z-10">
-                            "Fasticore Technology transformed our outdated legacy system into a modern, scalable platform. Their attention to detail and technical expertise exceeded our expectations. The project was delivered on time and within budget."
-                        </p>
-
-                        <!-- Client Info -->
-                        <div class="flex items-center">
-                            <!-- Avatar -->
-                            <div class="w-14 h-14 rounded-full overflow-hidden bg-gradient-to-br from-[#454452] to-[#ffffff]0 flex-shrink-0 border-2 border-[#FFFFFF] shadow-md">
-                                <img 
-                                    src="{{ asset('images/testimonials/robert-martinez.jpg') }}" 
-                                    alt="Robert Martinez" 
-                                    class="w-full h-full object-cover"
-                                >
+                        <!-- Testimonial 1: Andrew Davis -->
+                        <div 
+                            class="group relative bg-[#FFFFFF] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 sm:p-8 border-l-4 border-[#FF6701]"
+                            x-data="{ visible: false }"
+                            x-intersect="visible = true"
+                            x-transition:enter="transition ease-out duration-700"
+                            x-transition:enter-start="opacity-0 transform -translate-y-8"
+                            x-transition:enter-end="opacity-100 transform translate-y-0"
+                        >
+                            <!-- Quote Icon -->
+                            <div class="absolute top-4 sm:top-6 right-4 sm:right-6 text-[#FF6701] opacity-10">
+                                <svg class="w-10 h-10 sm:w-12 sm:h-12" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                                </svg>
                             </div>
-                            
-                            <!-- Name & Title -->
-                            <div class="ml-4">
-                                <h4 class="text-[#454452] font-bold text-lg">
-                                    Robert Martinez
-                                </h4>
-                                <p class="text-[#454452] text-sm">
-                                    CEO, Tech Flows Solutions
+
+                            <!-- Testimonial Text -->
+                            <p class="text-[#454452] text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 relative z-10">
+                                "The mobile app Fasticore developed for us has significantly improved our customer engagement. The user interface is intuitive, and the performance is outstanding. Their post-launch support has been exceptional."
+                            </p>
+
+                            <!-- Client Info -->
+                            <div class="flex items-center">
+                                <!-- Avatar -->
+                                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden bg-gradient-to-br from-blue-200 to-blue-400 flex-shrink-0 border-2 border-[#FFFFFF] shadow-md">
+                                    <img 
+                                        src="{{ asset('images/testimonials/andrew-davis.jpg') }}" 
+                                        alt="Andrew Davis" 
+                                        class="w-full h-full object-cover"
+                                    >
+                                </div>
+                                
+                                <!-- Name & Title -->
+                                <div class="ml-3 sm:ml-4">
+                                    <h4 class="text-[#454452] font-bold text-base sm:text-lg">
+                                        Andrew Davis
+                                    </h4>
+                                    <p class="text-[#454452] text-xs sm:text-sm">
+                                        CTO, Retail Max
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2: Lisa Johnson -->
+                        <div 
+                            class="group relative bg-[#FFFFFF] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 sm:p-8 border-l-4 border-[#FF6701]"
+                            x-data="{ visible: false }"
+                            x-intersect="visible = true"
+                            x-transition:enter="transition ease-out duration-700 delay-100"
+                            x-transition:enter-start="opacity-0 transform -translate-y-8"
+                            x-transition:enter-end="opacity-100 transform translate-y-0"
+                        >
+                            <!-- Quote Icon -->
+                            <div class="absolute top-4 sm:top-6 right-4 sm:right-6 text-[#FF6701] opacity-10">
+                                <svg class="w-10 h-10 sm:w-12 sm:h-12" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                                </svg>
+                            </div>
+
+                            <!-- Testimonial Text -->
+                            <p class="text-[#454452] text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 relative z-10">
+                                "Working with Fasticore has been a game-changer for our startup. They not only built an amazing product but also provided valuable insights that helped shape our business strategy. Highly recommended!"
+                            </p>
+
+                            <!-- Client Info -->
+                            <div class="flex items-center">
+                                <!-- Avatar -->
+                                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden bg-gradient-to-br from-pink-200 to-pink-400 flex-shrink-0 border-2 border-[#FFFFFF] shadow-md">
+                                    <img 
+                                        src="{{ asset('images/testimonials/lisa-johnson.jpg') }}" 
+                                        alt="Lisa Johnson" 
+                                        class="w-full h-full object-cover"
+                                    >
+                                </div>
+                                
+                                <!-- Name & Title -->
+                                <div class="ml-3 sm:ml-4">
+                                    <h4 class="text-[#454452] font-bold text-base sm:text-lg">
+                                        Lisa Johnson
+                                    </h4>
+                                    <p class="text-[#454452] text-xs sm:text-sm">
+                                        Founder, InnovativeLabs
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Second Row on Desktop: 1 Centered Testimonial -->
+                    <div class="md:flex md:justify-center">
+                        <div 
+                            class="w-full md:w-2/3 lg:w-1/2"
+                            x-data="{ visible: false }"
+                            x-intersect="visible = true"
+                            x-transition:enter="transition ease-out duration-700 delay-200"
+                            x-transition:enter-start="opacity-0 transform -translate-y-8"
+                            x-transition:enter-end="opacity-100 transform translate-y-0"
+                        >
+                            <!-- Testimonial 3: Robert Martinez -->
+                            <div class="group relative bg-[#FFFFFF] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 sm:p-8 border-l-4 border-[#FF6701]">
+                                
+                                <!-- Quote Icon -->
+                                <div class="absolute top-4 sm:top-6 right-4 sm:right-6 text-[#FF6701] opacity-10">
+                                    <svg class="w-10 h-10 sm:w-12 sm:h-12" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                                    </svg>
+                                </div>
+
+                                <!-- Testimonial Text -->
+                                <p class="text-[#454452] text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 relative z-10">
+                                    "Fasticore Technology transformed our outdated legacy system into a modern, scalable platform. Their attention to detail and technical expertise exceeded our expectations. The project was delivered on time and within budget."
                                 </p>
+
+                                <!-- Client Info -->
+                                <div class="flex items-center">
+                                    <!-- Avatar -->
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden bg-gradient-to-br from-[#454452] to-gray-400 flex-shrink-0 border-2 border-[#FFFFFF] shadow-md">
+                                        <img 
+                                            src="{{ asset('images/testimonials/robert-martinez.jpg') }}" 
+                                            alt="Robert Martinez" 
+                                            class="w-full h-full object-cover"
+                                        >
+                                    </div>
+                                    
+                                    <!-- Name & Title -->
+                                    <div class="ml-3 sm:ml-4">
+                                        <h4 class="text-[#454452] font-bold text-base sm:text-lg">
+                                            Robert Martinez
+                                        </h4>
+                                        <p class="text-[#454452] text-xs sm:text-sm">
+                                            CEO, Tech Flows Solutions
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
-
         </div>
-    </div>
-</section>
+    </section>
 
 
 <section class="py-16 sm:py-20 lg:py-24 bg-[#ffffff]">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Section Header -->
-        <div class="mb-12">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#454452]">
+        <div class="mb-8 sm:mb-12">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#454452]">
                 Featured Projects
             </h2>
         </div>
 
-        <!-- Projects Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 h-full max-w-7xl mx-auto">
-            
-            <!-- Project Card 1 -->
-            <article class="group bg-[#FFFFFF] rounded-2xl overflow-hidden border-2 border-primary shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                <div class="h-48 overflow-hidden bg-[#454452]">
-                    <img src="{{ asset('images/features/ecommerce.png') }}" alt="Ecommerce Platform" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="p-0">
-                    <div class="px-6 py-4 border-t-4 border-primary">
-                        <h3 class="text-xl font-bold text-[#454452]">Next Gen Ecommerce Platform</h3>
+        <!-- Projects Container -->
+        <div 
+            x-data="{
+                currentSlide: 0,
+                interval: null,
+                projects: [
+                    {
+                        title: 'Next Gen Ecommerce Platform',
+                        description: 'A comprehensive online marketplace with advanced features including AI-powered recommendations, real-time inventory management, and seamless payment integration.',
+                        image: 'ecommerce.png'
+                    },
+                    {
+                        title: 'Smart Healthcare Management',
+                        description: 'An integrated healthcare platform that streamlines patient management, appointment scheduling, and electronic medical records with enhanced security and compliance features.',
+                        image: 'healthcare.png'
+                    },
+                    {
+                        title: 'Financial Analytics Dashboard',
+                        description: 'A sophisticated data visualization platform that provides real-time financial insights, risk assessment, and predictive analytics for investment firms.',
+                        image: 'finance.png'
+                    },
+                    {
+                        title: 'Interactive Learning Platform',
+                        description: 'A modern e-learning solution with interactive content, progress tracking, gamification elements, and comprehensive analytics for educators.',
+                        image: 'interactive.png'
+                    },
+                    {
+                        title: 'Small Supply Chain Solution',
+                        description: 'An end-to-end supply chain management system with integration, real-time tracking and predictive maintenance capabilities.',
+                        image: 'social.png'
+                    },
+                    {
+                        title: 'Business Intelligence Suite',
+                        description: 'A comprehensive BI platform that transforms raw data into actionable insights with advanced data mining and machine learning capabilities.',
+                        image: 'business.png'
+                    }
+                ],
+                nextSlide() {
+                    this.currentSlide = (this.currentSlide + 1) % this.projects.length;
+                },
+                goToSlide(index) {
+                    this.currentSlide = index;
+                },
+                startAutoSlide() {
+                    this.interval = setInterval(() => {
+                        this.nextSlide();
+                    }, 3000);
+                },
+                stopAutoSlide() {
+                    if (this.interval) {
+                        clearInterval(this.interval);
+                        this.interval = null;
+                    }
+                }
+            }"
+            x-init="startAutoSlide()"
+            @mouseenter="stopAutoSlide()"
+            @mouseleave="startAutoSlide()"
+            class="max-w-7xl mx-auto"
+        >
+            <!-- Mobile Slider (visible on mobile only) -->
+            <div class="md:hidden relative">
+                <!-- Slider Container -->
+                <div class="overflow-hidden">
+                    <div 
+                        class="flex transition-transform duration-500 ease-out"
+                        :style="`transform: translateX(-${currentSlide * 100}%)`"
+                    >
+                        <template x-for="(project, index) in projects" :key="index">
+                            <div class="w-full flex-shrink-0 px-2">
+                                <article class="group bg-[#FFFFFF] rounded-2xl overflow-hidden border-2 border-[#FF6701] shadow-lg h-[420px] flex flex-col">
+                                    <div class="h-48 flex-shrink-0 overflow-hidden bg-[#454452]">
+                                        <img 
+                                            :src="`{{ asset('images/features') }}/${project.image}`" 
+                                            :alt="project.title" 
+                                            class="w-full h-full object-cover"
+                                        >
+                                    </div>
+                                    <div class="flex-1 flex flex-col p-0">
+                                        <div class="px-6 py-4 border-t-4 border-[#FF6701]">
+                                            <h3 class="text-lg font-bold text-[#454452] line-clamp-2" x-text="project.title"></h3>
+                                        </div>
+                                        <div class="px-6 py-6 flex-1">
+                                            <p class="text-[#454452] text-sm leading-relaxed line-clamp-5" x-text="project.description"></p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </template>
                     </div>
-                    <div class="px-6 py-6">
-                        <p class="text-[#454452] text-sm leading-relaxed">A comprehensive online marketplace with advanced features including AI-powered recommendations, real-time inventory management, and seamless payment integration.</p>
-                    </div>
                 </div>
-            </article>
 
-            <!-- Project Card 2 -->
-            <article class="group bg-[#FFFFFF] rounded-2xl overflow-hidden border-2 border-primary shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                <div class="h-48 overflow-hidden bg-[#454452]">
-                    <img src="{{ asset('images/features/healthcare.png') }}" alt="Healthcare Management" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <!-- Dots Indicator -->
+                <div class="flex justify-center mt-6 gap-2">
+                    <template x-for="(project, index) in projects" :key="index">
+                        <button 
+                            @click="goToSlide(index); stopAutoSlide(); startAutoSlide();"
+                            class="w-2 h-2 rounded-full transition-all duration-300"
+                            :class="currentSlide === index ? 'bg-[#FF6701] w-8' : 'bg-gray-300'"
+                            :aria-label="`Go to slide ${index + 1}`"
+                        ></button>
+                    </template>
                 </div>
-                <div class="p-0">
-                    <div class="px-6 py-4 border-t-4 border-primary">
-                        <h3 class="text-xl font-bold text-[#454452]">Smart Healthcare Management</h3>
-                    </div>
-                    <div class="px-6 py-6">
-                        <p class="text-[#454452] text-sm leading-relaxed">An integrated healthcare platform that streamlines patient management, appointment scheduling, and electronic medical records with enhanced security and compliance features.</p>
-                    </div>
-                </div>
-            </article>
+            </div>
 
-            <!-- Project Card 3 -->
-            <article class="group bg-[#FFFFFF] rounded-2xl overflow-hidden border-2 border-primary shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                <div class="h-48 overflow-hidden bg-[#454452]">
-                    <img src="{{ asset('images/features/finance.png') }}" alt="Financial Analytics" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="p-0">
-                    <div class="px-6 py-4 border-t-4 border-primary">
-                        <h3 class="text-xl font-bold text-[#454452]">Financial Analytics Dashboard</h3>
+            <!-- Desktop Grid (visible on tablet and up) -->
+            <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1 -->
+                <article class="group bg-[#FFFFFF] rounded-2xl overflow-hidden border-2 border-[#FF6701] shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden bg-[#454452]">
+                        <img src="{{ asset('images/features/ecommerce.png') }}" alt="Ecommerce Platform" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
-                    <div class="px-6 py-6">
-                        <p class="text-[#454452] text-sm leading-relaxed">A sophisticated data visualization platform that provides real-time financial insights, risk assessment, and predictive analytics for investment firms.</p>
+                    <div class="p-0">
+                        <div class="px-6 py-4 border-t-4 border-[#FF6701]">
+                            <h3 class="text-xl font-bold text-[#454452]">Next Gen Ecommerce Platform</h3>
+                        </div>
+                        <div class="px-6 py-6">
+                            <p class="text-[#454452] p-4 text-sm leading-relaxed">A comprehensive online marketplace with advanced features including AI-powered recommendations, real-time inventory management, and seamless payment integration.</p>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <!-- Project Card 4 -->
-            <article class="group bg-[#FFFFFF] rounded-2xl overflow-hidden border-2 border-primary shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                <div class="h-48 overflow-hidden bg-[#454452]">
-                    <img src="{{ asset('images/features/interactive.png') }}" alt="Learning Platform" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="p-0">
-                    <div class="px-6 py-4 border-t-4 border-primary">
-                        <h3 class="text-xl font-bold text-[#454452]">Interactive Learning Platform</h3>
+                <!-- Project Card 2 -->
+                <article class="group bg-[#FFFFFF] rounded-2xl overflow-hidden border-2 border-[#FF6701] shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden bg-[#454452]">
+                        <img src="{{ asset('images/features/healthcare.png') }}" alt="Healthcare Management" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
-                    <div class="px-6 py-6">
-                        <p class="text-[#454452] text-sm leading-relaxed">A modern e-learning solution with interactive content, progress tracking, gamification elements, and comprehensive analytics for educators.</p>
+                    <div class="p-0">
+                        <div class="px-6 py-4 border-t-4 border-[#FF6701]">
+                            <h3 class="text-xl font-bold text-[#454452]">Smart Healthcare Management</h3>
+                        </div>
+                        <div class="px-6 py-6">
+                            <p class="text-[#454452] p-4 text-sm leading-relaxed">An integrated healthcare platform that streamlines patient management, appointment scheduling, and electronic medical records with enhanced security and compliance features.</p>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <!-- Project Card 5 -->
-            <article class="group bg-[#FFFFFF] rounded-2xl overflow-hidden border-2 border-primary shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                <div class="h-48 overflow-hidden bg-[#454452]">
-                    <img src="{{ asset('images/features/social.png') }}" alt="Supply Chain" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="p-0">
-                    <div class="px-6 py-4 border-t-4 border-primary">
-                        <h3 class="text-xl font-bold text-[#454452]">Small Supply Chain Solution</h3>
+                <!-- Project Card 3 -->
+                <article class="group bg-[#FFFFFF] rounded-2xl overflow-hidden border-2 border-[#FF6701] shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden bg-[#454452]">
+                        <img src="{{ asset('images/features/finance.png') }}" alt="Financial Analytics" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
-                    <div class="px-6 py-6">
-                        <p class="text-[#454452] text-sm leading-relaxed">An end-to-end supply chain management system with integration, real-time tracking and predictive maintenance capabilities.</p>
+                    <div class="p-0">
+                        <div class="px-6 py-4 border-t-4 border-[#FF6701]">
+                            <h3 class="text-xl font-bold text-[#454452]">Financial Analytics Dashboard</h3>
+                        </div>
+                        <div class="px-6 py-6">
+                            <p class="text-[#454452] p-4 text-sm leading-relaxed">A sophisticated data visualization platform that provides real-time financial insights, risk assessment, and predictive analytics for investment firms.</p>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <!-- Project Card 6 -->
-            <article class="group bg-[#FFFFFF] rounded-2xl overflow-hidden border-2 border-primary shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                <div class="h-48 overflow-hidden bg-[#454452]">
-                    <img src="{{ asset('images/features/business.png') }}" alt="Business Intelligence" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="p-0">
-                    <div class="px-6 py-4 border-t-4 border-primary">
-                        <h3 class="text-xl font-bold text-[#454452]">Business Intelligence Suite</h3>
+                <!-- Project Card 4 -->
+                <article class="group bg-[#FFFFFF] rounded-2xl overflow-hidden border-2 border-[#FF6701] shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden bg-[#454452]">
+                        <img src="{{ asset('images/features/interactive.png') }}" alt="Learning Platform" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
-                    <div class="px-6 py-6">
-                        <p class="text-[#454452] text-sm leading-relaxed">A comprehensive BI platform that transforms raw data into actionable insights with advanced data mining and machine learning capabilities.</p>
+                    <div class="p-0">
+                        <div class="px-6 py-4 border-t-4 border-[#FF6701]">
+                            <h3 class="text-xl font-bold text-[#454452]">Interactive Learning Platform</h3>
+                        </div>
+                        <div class="px-6 py-6">
+                            <p class="text-[#454452] p-4 text-sm leading-relaxed">A modern e-learning solution with interactive content, progress tracking, gamification elements, and comprehensive analytics for educators.</p>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
+
+                <!-- Project Card 5 -->
+                <article class="group bg-[#FFFFFF] rounded-2xl overflow-hidden border-2 border-[#FF6701] shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden bg-[#454452]">
+                        <img src="{{ asset('images/features/social.png') }}" alt="Supply Chain" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-0">
+                        <div class="px-6 py-4 border-t-4 border-[#FF6701]">
+                            <h3 class="text-xl font-bold text-[#454452]">Small Supply Chain Solution</h3>
+                        </div>
+                        <div class="px-6 py-6">
+                            <p class="text-[#454452] p-4 text-sm leading-relaxed">An end-to-end supply chain management system with integration, real-time tracking and predictive maintenance capabilities.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project Card 6 -->
+                <article class="group bg-[#FFFFFF] rounded-2xl overflow-hidden border-2 border-[#FF6701] shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden bg-[#454452]">
+                        <img src="{{ asset('images/features/business.png') }}" alt="Business Intelligence" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-0">
+                        <div class="px-6 py-4 border-t-4 border-[#FF6701]">
+                            <h3 class="text-xl font-bold text-[#454452]">Business Intelligence Suite</h3>
+                        </div>
+                        <div class="px-6 py-6">
+                            <p class="text-[#454452] p-4 text-sm leading-relaxed">A comprehensive BI platform that transforms raw data into actionable insights with advanced data mining and machine learning capabilities.</p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
 
         </div>
 
-         <!-- Call-to-Action Section -->
-        <div class="flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-[#FFFFFF]">
+        <!-- Call-to-Action Section -->
+        <div class="flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-[#FFFFFF] mt-12">
             
             <!-- Content Wrapper -->
             <div class="max-w-4xl mx-auto">
                 
                 <!-- Heading -->
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1F1F1F] mb-6 leading-tight">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#1F1F1F] mb-6 leading-tight">
                     Ready to Transform Your Ideas into Reality
                 </h2>
 
                 <!-- Subtext -->
-                <p class="text-base sm:text-lg text-[#454452] mb-10 max-w-3xl mx-auto leading-relaxed">
+                <p class="text-sm sm:text-base lg:text-lg text-[#454452] mb-10 max-w-3xl mx-auto leading-relaxed">
                     Let's discuss how Fasticore Technology can help accelerate your business growth through innovative software solutions.
                 </p>
 
@@ -811,7 +982,7 @@
                 <div>
                     <a 
                         href="{{ route('contact') }}" 
-                        class="inline-flex items-center justify-center px-10 py-4 text-base sm:text-lg font-semibold text-[#FF6701] bg-transparent border-2 border-[#FF6701] rounded-lg hover:bg-[#FF6701] hover:text-[#FFFFFF] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                        class="inline-flex items-center justify-center px-8 sm:px-10 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold text-[#FF6701] bg-transparent border-2 border-[#FF6701] rounded-lg hover:bg-[#FF6701] hover:text-[#FFFFFF] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
                     >
                         Get Started Today
                     </a>

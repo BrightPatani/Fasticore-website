@@ -5,7 +5,7 @@
             
             <!-- Left Column - Content -->
             <div 
-                class="max-w-xl"
+                class="max-w-xl mx-auto text-center lg:text-left"
                 x-data="{ visible: false }"
                 x-init="setTimeout(() => visible = true, 100)"
                 x-show="visible"
@@ -41,7 +41,7 @@
 
             <!-- Right Column -->
             <div 
-                class="relative"
+                class="relative hidden lg:block"
                 x-data="{ visible: false }"
                 x-init="setTimeout(() => visible = true, 300)"
                 x-show="visible"
@@ -55,7 +55,7 @@
                         alt="Build with Fasticore - Development illustration" 
                         class="w-full h-auto"
                         loading="lazy"
->
+                    >
                 </div>
             </div>
         </div>
