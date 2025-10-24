@@ -70,11 +70,11 @@
 <body class="font-sans antialiased bg-[#FFFFFF] text-[#454452]">
     
     <!-- Header Component -->
-    @if(request()->routeIs('views.home') || request()->routeIs('home'))
+    @if(request()->routeIs('views.home, views.project') || request()->routeIs('home, project'))
         <header 
             x-data="{ mobileMenuOpen: false, scrolled: false }" 
             x-init="window.addEventListener('scroll', () => { scrolled = window.pageYOffset > 20 })"
-            :class="scrolled ? 'bg-white shadow-md' : 'bg-transparent'"
+            :class="scrolled ? 'bg-transparent' : 'bg-transparent'"
             class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-none"
         >
             <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -198,7 +198,7 @@
         </div>
     </div>
         </header>
-
+        
         @else 
             @include('components.header')
         @endif

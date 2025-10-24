@@ -92,8 +92,7 @@
             <div class="overflow-x-auto scrollbar-hide" x-ref="carousel">
                 <div 
                     class="flex transition-transform duration-500 ease-out"
-                    :style="`transform: translateX(-${currentSlide * (100 / slidesToShow)}%)`"
-                >
+                    :style="`transform: translateX(-${currentSlide * (100 / slidesToShow)}%)`">
                     <!-- Service Cards -->
                     <template x-for="(service, index) in services" :key="index">
                         <div 
@@ -107,13 +106,13 @@
                                 class="relative bg-[#FFFFFF] rounded-2xl shadow-xl p-8 overflow-hidden h-full transition-all duration-300"
                                 :class="hover ? 'transform -translate-y-2 shadow-xl' : ''"
                             >
-                                <!-- Blue Background Overlay (slides in from right) -->
+                                <!-- Blue Background Overlay -->
                                 <div 
-                                    class="absolute inset-0 bg-[#003686] transition-transform duration-500 ease-out z-0"
+                                    class="absolute inset-0 bg-[#003686]/50 transition-transform duration-500 ease-out z-0"
                                     :class="hover ? 'translate-x-0' : '-translate-x-full'"
                                 ></div>
 
-                                <!-- Content Wrapper (relative positioning to stay above overlay) -->
+                                <!-- Content Wrapper -->
                                 <div class="relative z-10 h-full flex flex-col">
                                     <!-- Title -->
                                     <h3 
@@ -130,7 +129,7 @@
                                     ></p>
 
                                     <!-- Bottom-Right Icon -->
-                                    <div class="flex justify-end mt-4">
+                                    <div class="flex justify-end mt-2">
                                         <img 
                                             :src="'{{ asset('images') }}/icons/' + service.icon + '.png'" 
                                             :alt="service.title + ' Icon'"

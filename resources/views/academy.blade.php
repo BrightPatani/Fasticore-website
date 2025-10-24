@@ -138,12 +138,12 @@
 
 
     {{-- Customer Testimonials Section --}}
-    <section class="py-16 sm:py-20 lg:py-24 bg-gray-50 Z-10">
+    <section class="py-16 sm:py-20 lg:py-24 bg-[#FFFFFF] Z-10">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- Section Header -->
             <div class="mb-12 sm:mb-16">
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#454452]">
                     What Our Graduates Say
                 </h2>
             </div>
@@ -159,7 +159,7 @@
                     x-transition:enter-start="opacity-0 transform translate-y-8"
                     x-transition:enter-end="opacity-100 transform translate-y-0"
                 >
-                    <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 sm:p-10 max-w-2xl w-full border-l-4 border-orange-500">
+                    <div class="bg-[#FFFFFF] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 sm:p-10 max-w-2xl w-full border-l-4 border-orange-500">
                         <!-- Quote Icon -->
                         <div class="mb-4">
                             <svg class="w-10 h-10 text-orange-500 opacity-50" fill="currentColor" viewBox="0 0 24 24">
@@ -168,13 +168,13 @@
                         </div>
 
                         <!-- Quote Text -->
-                        <p class="text-gray-600 text-base sm:text-lg leading-relaxed mb-6 italic">
+                        <p class="text-[#454452] text-base sm:text-lg leading-relaxed mb-6 italic">
                             “The UI/UX sessions were a game changer for me. I built a real portfolio and got hired within 2 months of graduating.”
                         </p>
 
                         <!-- Author Info -->
-                        <div class="border-t border-gray-200 pt-6">
-                            <h4 class="text-xl font-bold text-gray-900 mb-1">
+                        <div class="border-t border-[#FFFFFF] pt-6">
+                            <h4 class="text-xl font-bold text-[#454452] mb-1">
                                 Blessing I.
                             </h4>
                             <p class="text-orange-500 font-medium text-sm">
@@ -189,7 +189,7 @@
                     
                     <!-- Testimonial 2 -->
                     <div 
-                        class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border-l-4 border-orange-500"
+                        class="bg-[#FFFFFF] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border-l-4 border-orange-500"
                         x-data="{ visible: false }"
                         x-intersect="visible = true"
                         x-transition:enter="transition ease-out duration-700 delay-100"
@@ -204,13 +204,13 @@
                         </div>
 
                         <!-- Quote Text -->
-                        <p class="text-gray-600 text-base leading-relaxed mb-6 italic">
+                        <p class="text-[#454452] text-base leading-relaxed mb-6 italic">
                             “Fasticore Academy gave me the skills and confidence to land my first developer job. The mentors were amazing and the projects were real!”
                         </p>
 
                         <!-- Author Info -->
-                        <div class="border-t border-gray-200 pt-6">
-                            <h4 class="text-lg font-bold text-gray-900 mb-1">
+                        <div class="border-t border-[#FFFFFF] pt-6">
+                            <h4 class="text-lg font-bold text-[#454452] mb-1">
                                 Jane Doe
                             </h4>
                             <p class="text-orange-500 font-medium text-sm">
@@ -221,7 +221,7 @@
 
                     <!-- Testimonial 3 -->
                     <div 
-                        class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border-l-4 border-orange-500"
+                        class="bg-[#FFFFFF] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border-l-4 border-orange-500"
                         x-data="{ visible: false }"
                         x-intersect="visible = true"
                         x-transition:enter="transition ease-out duration-700 delay-200"
@@ -236,13 +236,13 @@
                         </div>
 
                         <!-- Quote Text -->
-                        <p class="text-gray-600 text-base leading-relaxed mb-6 italic">
+                        <p class="text-[#454452] text-base leading-relaxed mb-6 italic">
                             “I loved the data science track! The bootcamp was intense but so rewarding. I now work as a data analyst thanks to Fasticore.”
                         </p>
 
                         <!-- Author Info -->
-                        <div class="border-t border-gray-200 pt-6">
-                            <h4 class="text-lg font-bold text-gray-900 mb-1">
+                        <div class="border-t border-[#FFFFFF] pt-6">
+                            <h4 class="text-lg font-bold text-[#454452] mb-1">
                                 Samuel O
                             </h4>
                             <p class="text-orange-500 font-medium text-sm">
@@ -400,7 +400,7 @@
                             id="track"
                             x-model="formData.track"
                             required
-                            class="w-full px-4 py-3 border border-[#E2E2E2] rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all appearance-none bg-white cursor-pointer"
+                            class="w-full px-4 py-3 border border-[#E2E2E2] rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all appearance-none bg-[#FFFFFF] cursor-pointer"
                             style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.5em 1.5em; padding-right: 3rem;"
                         >
                             <option value="" disabled selected>Select a track</option>
@@ -415,7 +415,7 @@
                     <!-- Background Textarea -->
                     <div>
                         <label for="background" class="block text-sm font-semibold text-dark-900 mb-2">
-                            Tell us About Your Background <span class="text-gray-500 font-normal">(Optional)</span>
+                            Tell us About Your Background <span class="text-[#FFFFFF]0 font-normal">(Optional)</span>
                         </label>
                         <textarea 
                             id="background"
@@ -432,11 +432,11 @@
                             type="submit"
                             :disabled="loading"
                             :class="loading ? 'opacity-70 cursor-not-allowed' : 'hover:bg-primary-600'"
-                            class="w-full px-8 py-4 bg-primary text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                            class="w-full px-8 py-4 bg-primary text-[#FFFFFF] font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                         >
                             <span x-show="!loading">Register Now</span>
                             <span x-show="loading" x-cloak class="flex items-center justify-center">
-                                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-[#FFFFFF]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                                     <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                 </svg>

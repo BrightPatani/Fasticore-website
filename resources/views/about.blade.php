@@ -11,7 +11,7 @@
             alt="Fasticore Technology Background" 
             class="w-full h-full object-cover"
         >
-        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="absolute inset-0 bg-[#454452] bg-opacity-60"></div>
     </div>
 
 
@@ -38,7 +38,7 @@
     <!-- Story Section -->
     <section class="relative -mt-30 sm:-mt-40  lg:-mt-64 pb-12 sm:pb-20 lg:pb-24">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-5xl mx-auto bg-[#FFFFFF]">
+            <div class="max-w-5xl mx-auto">
                 <div 
                     class="backdrop-blur-md bg-[#454452] rounded-2xl shadow-2xl 
                         p-6 sm:p-10 lg:p-16 mt-0 sm:-mt-40 lg:-mt-64"
@@ -124,7 +124,7 @@
                 startAutoSlide() {
                     this.interval = setInterval(() => {
                         if (!this.isPaused) this.nextSlide();
-                    }, 2500);
+                    }, 2000);
                 },
                 stopAutoSlide() {
                     clearInterval(this.interval);
@@ -155,7 +155,7 @@
                                 class="relative bg-[#FFFFFF] rounded-2xl shadow-xl p-8 overflow-hidden h-full transition-all duration-300"
                                 :class="hover ? 'transform -translate-y-2 shadow-xl' : ''"
                             >
-                                <!-- Blue Background Overlay (slides in from left) -->
+                                <!-- Blue Background Overlay  -->
                                 <div 
                                     class="absolute inset-0 bg-[#003686] transition-transform duration-500 ease-out z-0"
                                     :class="hover ? 'translate-x-0' : '-translate-x-full'"
@@ -178,7 +178,7 @@
                                     ></p>
 
                                     <!-- Icon (bottom-right) -->
-                                    <div class="flex justify-end mt-4">
+                                    <div class="flex justify-end mt-2">
                                         <img 
                                             :src="'{{ asset('images/values') }}/' + value.icon + '.png'" 
                                             :alt="value.title + ' Icon'"

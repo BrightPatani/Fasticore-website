@@ -51,6 +51,11 @@ Route::get('/privacy', function () {
     return view('privacy');
 })->name('privacy');
 
+// project page
+Route::get('/project', function () {
+    return view('project');
+})->name('project');
+
 
 
 Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact.submit');

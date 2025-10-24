@@ -1,5 +1,5 @@
 <section 
-    class="relative bg-[#FFFFFF] pt-24 pb-16 sm:pt-32 sm:pb-24 md:pt-36 lg:pt-40 lg:pb-32 overflow-hidden bg-cover bg-center bg-no-repeat"
+    class="relative bg-[#FFFFFF] pt-20 pb-16 sm:pt-32 sm:pb-24 md:pt-36 lg:pt-40 lg:pb-32 overflow-hidden bg-cover bg-center bg-no-repeat"
     style="background-image: url('{{ asset('images/herobg.png') }}');"
 >    
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,14 +22,14 @@
                 </h1>
                 
                 <!-- Description -->
-                <p class="text-xs sm:text-sm lg:text-lg text-[#454452] leading-relaxed mb-4 sm:mb-6 lg:mb-8">
+                <p class="text-md sm:text-sm lg:text-lg text-[#454452] leading-relaxed mb-4 sm:mb-6 lg:mb-8">
                     From tailored solutions to tech empowerment, Fasticore Academy equips you with the skills, while our experts build the systems to scale your business
                 </p>
                 
                 <!-- CTA Button -->
                 <div>
                     <a 
-                        href="{{ route('contact') }}" 
+                        href="{{ route('project') }}" 
                         class="inline-flex items-center justify-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 text-xs sm:text-sm lg:text-base font-semibold text-[#FFFFFF] bg-[#FF6701] rounded-full shadow-lg shadow-[#FF67014A] hover:bg-[#e55d01] hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF6701]"
                     >
                         Join us now
