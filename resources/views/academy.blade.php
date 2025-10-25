@@ -3,7 +3,7 @@
 @section('title', 'Academy - Fasticore Technologies')
 
 @section('content')
-<div class="relative h-screen bg-[#454452] overflow-hidden">
+<div class="relative h-screen bg-gradient-to-b from-[#F6F6FC] to-[#FFFFFF] overflow-hidden">
     <!-- Background Image with Overlay -->
     <div class="absolute inset-0 z-0">
         <img 

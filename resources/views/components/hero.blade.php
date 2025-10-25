@@ -1,5 +1,5 @@
 <section 
-    class="relative bg-[#FFFFFF] pt-20 pb-16 sm:pt-32 sm:pb-24 md:pt-36 lg:pt-40 lg:pb-32 overflow-hidden bg-cover bg-center bg-no-repeat"
+    class="relative bg-gradient-to-b from-[#F6F6FC] to-[#FFFFFF] pt-20 pb-16 sm:pt-32 sm:pb-24 md:pt-36 lg:pt-40 lg:pb-32 overflow-hidden bg-cover bg-center bg-no-repeat"
     style="background-image: url('{{ asset('images/herobg.png') }}');"
 >    
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">

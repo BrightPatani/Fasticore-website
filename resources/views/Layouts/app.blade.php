@@ -70,11 +70,11 @@
 <body class="font-sans antialiased bg-[#FFFFFF] text-[#454452]">
     
     <!-- Header Component -->
-    @if(request()->routeIs('views.home, views.project') || request()->routeIs('home, project'))
+    @if(request()->routeIs('views.home,') || request()->routeIs('home', 'project'))
         <header 
             x-data="{ mobileMenuOpen: false, scrolled: false }" 
             x-init="window.addEventListener('scroll', () => { scrolled = window.pageYOffset > 20 })"
-            :class="scrolled ? 'bg-transparent' : 'bg-transparent'"
+            :class="scrolled ? 'bg-[#F5F5F5]/10 backdrop-blur-sm' : 'bg-transparent'"
             class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-none"
         >
             <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -93,19 +93,19 @@
                     
                     <!-- Desktop Navigation -->
                     <div class="hidden lg:flex lg:items-center lg:space-x-8">
-                        <a href="{{ route('home') }}" class="text-[#454452] hover:text-orange-500 font-medium text-sm transition-colors duration-200 {{ request()->routeIs('home') ? 'text-orange-500' : '' }}">
+                        <a href="{{ route('home') }}" class="text-[#454452] hover:text-[#FF6701] font-medium text-sm transition-colors duration-200 {{ request()->routeIs('home') ? 'text-[#FF6701]' : '' }}">
                             HOME
                         </a>
-                        <a href="{{ route('services') }}" class="text-[#454452] hover:text-orange-500 font-medium text-sm transition-colors duration-200 {{ request()->routeIs('services') ? 'text-orange-500' : '' }}">
+                        <a href="{{ route('services') }}" class="text-[#454452] hover:text-[#FF6701] font-medium text-sm transition-colors duration-200 {{ request()->routeIs('services') ? 'text-[#FF6701]' : '' }}">
                             SERVICES
                         </a>
-                        <a href="{{ route('solutions') }}" class="text-[#454452] hover:text-orange-500 font-medium text-sm transition-colors duration-200 {{ request()->routeIs('solutions') ? 'text-orange-500' : '' }}">
+                        <a href="{{ route('solutions') }}" class="text-[#454452] hover:text-[#FF6701] font-medium text-sm transition-colors duration-200 {{ request()->routeIs('solutions') ? 'text-[#FF6701]' : '' }}">
                             SOLUTIONS
                         </a>
-                        <a href="{{ route('academy') }}" class="text-[#454452] hover:text-orange-500 font-medium text-sm transition-colors duration-200 {{ request()->routeIs('academy') ? 'text-orange-500' : '' }}">
+                        <a href="{{ route('academy') }}" class="text-[#454452] hover:text-[#FF6701] font-medium text-sm transition-colors duration-200 {{ request()->routeIs('academy') ? 'text-[#FF6701]' : '' }}">
                             ACADEMY
                         </a>
-                        <a href="{{ route('about') }}" class="text-[#454452] hover:text-orange-500 font-medium text-sm transition-colors duration-200 {{ request()->routeIs('about') ? 'text-orange-500' : '' }}">
+                        <a href="{{ route('about') }}" class="text-[#454452] hover:text-[#FF6701] font-medium text-sm transition-colors duration-200 {{ request()->routeIs('about') ? 'text-[#FF6701]' : '' }}">
                             ABOUT US
                         </a>
                     </div>
@@ -115,17 +115,17 @@
                         <button 
                             @click="mobileMenuOpen = !mobileMenuOpen"
                             type="button" 
-                            class="inline-flex items-center justify-center p-2 rounded-md text-[#003686] hover:text-[#FF6701] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500 transition-colors"
+                            class="inline-flex items-center justify-center p-2 rounded-md text-[#003686] hover:text-[#003686] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#003686] transition-colors"
                             aria-expanded="false"
                             :aria-expanded="mobileMenuOpen.toString()"
                         >
                             <span class="sr-only">Open main menu</span>
                             <!-- Hamburger Icon -->
-                            <svg x-show="!mobileMenuOpen" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg x-show="!mobileMenuOpen" class="h-6 w-6 text-[#003686]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
-                            <!-- Close Icon (Hidden - will show in overlay) -->
-                            <svg x-show="mobileMenuOpen" x-cloak class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <!-- Close Icon -->
+                            <svg x-show="mobileMenuOpen" x-cloak class="h-6 w-6 text[#003686]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
@@ -150,7 +150,7 @@
         <!-- Close Button (Top Right) -->
         <button 
             @click="mobileMenuOpen = false"
-            class="absolute top-6 right-6 p-2 rounded-md text-[#454452] hover:text-[#FF6701] focus:outline-none transition-colors"
+            class="absolute top-6 right-6 p-2  rounded-md text-[#454452] hover:text-[#FF6701] focus:outline-none  transition-colors"
             aria-label="Close menu"
         >
            

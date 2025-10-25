@@ -5,7 +5,7 @@
             scrolled = window.pageYOffset > 20 
         })
     "
-    :class="scrolled ? 'bg-transparent' : 'bg-transparent'"
+    :class="scrolled ? 'bg-[#F5F5F5]/10 backdrop-blur-sm' : 'bg-transparent'"
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
 >
     <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,18 +76,18 @@
                 <button 
                     @click="mobileMenuOpen = !mobileMenuOpen"
                     type="button" 
-                    class="inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500 transition-colors"
+                    class="inline-flex items-center justify-center p-2 text-[#BFCDE1] hover:text-[#FF6701] rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#BFCDE1] transition-colors"
                     :class="scrolled ? 'text-[#FF6701]' : 'text-white hover:text-[#FF6701]'"
                     aria-expanded="false"
                     :aria-expanded="mobileMenuOpen.toString()"
                 >
                     <span class="sr-only">Open main menu</span>
                     <!-- Hamburger Icon -->
-                    <svg x-show="!mobileMenuOpen" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg x-show="!mobileMenuOpen" class="h-6 w-6 text-[#BFCDE1]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                     <!-- Close Icon -->
-                    <svg x-show="mobileMenuOpen" x-cloak class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg x-show="mobileMenuOpen" x-cloak class="h-6 w-6 text-[#BFCDE1]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>

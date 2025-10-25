@@ -10,7 +10,7 @@
 <section class="relative min-h-screen bg-[#454452] overflow-hidden">
     
     <!-- Background Image with Overlay -->
-    <div class="absolute inset-0 z-0">
+    <div class="absolute inset-0 h-screen -z-0">
         <!-- Background Image -->
         <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" 
              style="background-image: url('{{ asset('images/solutions.png') }}');">
@@ -99,24 +99,26 @@
             </div>
         </div>
 
-        <!-- Category Filter Tabs -->
+        <!-- Category Filter Tabs with Horizontal Scroll -->
         <div 
-            class="flex flex-wrap gap-4 justify-start"
+            class="relative z-10"
             x-data="{ 
                 activeTab: 'business',
                 visible: false 
             }"
             x-init="setTimeout(() => visible = true, 700)"
-            x-show="visible"
             x-transition:enter="transition ease-out duration-700"
             x-transition:enter-start="opacity-0 transform translate-y-8"
             x-transition:enter-end="opacity-100 transform translate-y-0"
         >
+    <!-- Scrollable Container -->
+    <div class="overflow-x-auto scrollbar-hide pb-2">
+        <div class="flex gap-4 min-w-max">
             <!-- All Solutions -->
             <button 
                 @click="activeTab = 'all'"
                 :class="activeTab === 'all' ? 'bg-[#FFFFFF] text-dark-900' : 'bg-transparent text-[#FFFFFF]'"
-                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-[#FFFFFF] hover:text-dark-900"
+                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-[#FFFFFF] hover:text-dark-900 whitespace-nowrap"
             >
                 All Solutions
             </button>
@@ -125,7 +127,7 @@
             <button 
                 @click="activeTab = 'business'"
                 :class="activeTab === 'business' ? 'bg-primary text-[#FFFFFF]' : 'bg-transparent text-[#FFFFFF]'"
-                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-[#FFFFFF] hover:border-primary"
+                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-[#FFFFFF] hover:border-primary whitespace-nowrap"
             >
                 Business Management
             </button>
@@ -134,7 +136,7 @@
             <button 
                 @click="activeTab = 'ecommerce'"
                 :class="activeTab === 'ecommerce' ? 'bg-primary text-[#FFFFFF]' : 'bg-transparent text-[#FFFFFF]'"
-                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-[#FFFFFF] hover:border-primary"
+                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-[#FFFFFF] hover:border-primary whitespace-nowrap"
             >
                 E-commerce
             </button>
@@ -143,7 +145,7 @@
             <button 
                 @click="activeTab = 'finance'"
                 :class="activeTab === 'finance' ? 'bg-primary text-[#FFFFFF]' : 'bg-transparent text-[#FFFFFF]'"
-                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-[#FFFFFF] hover:border-primary"
+                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-[#FFFFFF] hover:border-primary whitespace-nowrap"
             >
                 Finance Accounting
             </button>
@@ -152,7 +154,7 @@
             <button 
                 @click="activeTab = 'hr'"
                 :class="activeTab === 'hr' ? 'bg-primary text-[#FFFFFF]' : 'bg-transparent text-[#FFFFFF]'"
-                class="px-6 py-3 rounded-full font-medium transition-all duration-300  hover:bg-primary hover:text-[#FFFFFF] hover:border-primary"
+                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-[#FFFFFF] hover:border-primary whitespace-nowrap"
             >
                 Human Resources
             </button>
@@ -161,13 +163,24 @@
             <button 
                 @click="activeTab = 'education'"
                 :class="activeTab === 'education' ? 'bg-primary text-[#FFFFFF]' : 'bg-transparent text-[#FFFFFF]'"
-                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-[#FFFFFF] hover:border-primary"
+                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-[#FFFFFF] hover:border-primary whitespace-nowrap"
             >
                 Education
             </button>
         </div>
-
     </div>
+</div>
+
+<style>
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+</style>
 
     <!-- Bottom Gradient Fade -->
     <div class="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-t from-[#FFFFFF] to-transparent z-0"></div>
