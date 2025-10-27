@@ -144,20 +144,20 @@
             x-transition:leave="transition ease-in duration-200"
             x-transition:leave-start="translate-x-0 opacity-100"
             x-transition:leave-end="translate-x-full opacity-0"
-            class="lg:hidden fixed top-0 right-0 h-full w-1/2 bg-[#FFFFFF]/60 backdrop-blur-md z-40 shadow-lg"
+            class="lg:hidden fixed top-0 right-0 bottom-0 h-full w-1/2 bg-[#FFFFFF]/60 backdrop-blur-lg z-10 shadow-lg"
             style="padding-top: 80px;"
         >
-        <!-- Close Button (Top Right) -->
+        <!-- Close Button -->
         <button 
             @click="mobileMenuOpen = false"
-            class="absolute top-6 right-6 p-2  rounded-md text-[#454452] hover:text-[#FF6701] focus:outline-none  transition-colors"
+            class="absolute top-6 right-6 p-2 rounded-md text-[#454452] hover:text-[#FF6701] focus:outline-none transition-colors"
             aria-label="Close menu"
         >
            
         </button>
 
         <!-- Menu Items Container -->
-        <div class="h-full flex flex-col justify-start pt-16 px-8">
+        <div class="h-full flex flex-col bg-[#FFFFFF]/60 justify-start pt-16 px-8">
             <nav class="space-y-8">
                 <a 
                     href="{{ route('home') }}" 

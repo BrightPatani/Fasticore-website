@@ -499,7 +499,7 @@
         </div>
     </div>
 </div>
-
+@include("components.footer")
 <script>
 function quoteForm() {
     return {

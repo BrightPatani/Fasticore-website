@@ -18,7 +18,7 @@
     </div>
 
     <!--Dark Overlay-->
-        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="absolute inset-0 bg-[#454452]"></div>
 
     <!-- Content Container -->
     <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
@@ -35,7 +35,7 @@
                 x-transition:enter-start="opacity-0 transform -translate-y-8"
                 x-transition:enter-end="opacity-100 transform translate-y-0"
             >
-                Fasticore <span class="text-primary">Solutions</span>
+                Fasticore <span class="text-[#FF6701]">Solutions</span>
             </h1>
 
             <!-- Description -->
@@ -67,30 +67,30 @@
                     
                     <!-- Stat 1: Solutions Available -->
                     <div class="text-center pt-8 sm:pt-0">
-                        <div class="text-5xl sm:text-6xl lg:text-7xl font-bold text-dark-900 mb-2">
-                            15<span class="text-primary">+</span>
+                        <div class="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#454452] mb-2">
+                            15<span class="text-[#FF6701]">+</span>
                         </div>
-                        <div class="text-base sm:text-lg text-dark-600 font-medium">
+                        <div class="text-base sm:text-lg text-[#454452] font-medium">
                             Solutions Available
                         </div>
                     </div>
 
                     <!-- Stat 2: Active Users -->
                     <div class="text-center pt-8 sm:pt-0">
-                        <div class="text-5xl sm:text-6xl lg:text-7xl font-bold text-dark-900 mb-2">
-                            500<span class="text-primary">+</span>
+                        <div class="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#454452] mb-2">
+                            500<span class="text-[#FF6701]">+</span>
                         </div>
-                        <div class="text-base sm:text-lg text-dark-600 font-medium">
+                        <div class="text-base sm:text-lg text-[#454452] font-medium">
                             Active Users
                         </div>
                     </div>
 
                     <!-- Stat 3: Uptime -->
                     <div class="text-center pt-8 sm:pt-0">
-                        <div class="text-5xl sm:text-6xl lg:text-7xl font-bold text-dark-900 mb-2">
-                            99.9<span class="text-primary">%</span>
+                        <div class="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#454452] mb-2">
+                            99.9<span class="text-[#FF6701]">%</span>
                         </div>
-                        <div class="text-base sm:text-lg text-dark-600 font-medium">
+                        <div class="text-base sm:text-lg text-[#454452] font-medium">
                             Uptime
                         </div>
                     </div>
@@ -117,8 +117,8 @@
             <!-- All Solutions -->
             <button 
                 @click="activeTab = 'all'"
-                :class="activeTab === 'all' ? 'bg-[#FFFFFF] text-dark-900' : 'bg-transparent text-[#FFFFFF]'"
-                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-[#FFFFFF] hover:text-dark-900 whitespace-nowrap"
+                :class="activeTab === 'all' ? 'bg-[#FFFFFF] text-[#454452]' : 'bg-transparent text-[#FFFFFF]'"
+                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-[#FFFFFF] hover:text-[#454452] whitespace-nowrap"
             >
                 All Solutions
             </button>
@@ -126,8 +126,8 @@
             <!-- Business Management -->
             <button 
                 @click="activeTab = 'business'"
-                :class="activeTab === 'business' ? 'bg-primary text-[#FFFFFF]' : 'bg-transparent text-[#FFFFFF]'"
-                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-[#FFFFFF] hover:border-primary whitespace-nowrap"
+                :class="activeTab === 'business' ? 'bg-[#FF6701] text-[#FFFFFF]' : 'bg-transparent text-[#FFFFFF]'"
+                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-[#FF6701] hover:text-[#FFFFFF] hover:border-[#FF6701] whitespace-nowrap"
             >
                 Business Management
             </button>
@@ -135,8 +135,8 @@
             <!-- E-commerce -->
             <button 
                 @click="activeTab = 'ecommerce'"
-                :class="activeTab === 'ecommerce' ? 'bg-primary text-[#FFFFFF]' : 'bg-transparent text-[#FFFFFF]'"
-                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-[#FFFFFF] hover:border-primary whitespace-nowrap"
+                :class="activeTab === 'ecommerce' ? 'bg-[#FF6701] text-[#FFFFFF]' : 'bg-transparent text-[#FFFFFF]'"
+                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-[#FF6701] hover:text-[#FFFFFF] hover:border-[#FF6701] whitespace-nowrap"
             >
                 E-commerce
             </button>
@@ -144,8 +144,8 @@
             <!-- Finance Accounting -->
             <button 
                 @click="activeTab = 'finance'"
-                :class="activeTab === 'finance' ? 'bg-primary text-[#FFFFFF]' : 'bg-transparent text-[#FFFFFF]'"
-                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-[#FFFFFF] hover:border-primary whitespace-nowrap"
+                :class="activeTab === 'finance' ? 'bg-[#FF6701] text-[#FFFFFF]' : 'bg-transparent text-[#FFFFFF]'"
+                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-[#FF6701] hover:text-[#FFFFFF] hover:border-[#FF6701] whitespace-nowrap"
             >
                 Finance Accounting
             </button>
@@ -153,8 +153,8 @@
             <!-- Human Resources -->
             <button 
                 @click="activeTab = 'hr'"
-                :class="activeTab === 'hr' ? 'bg-primary text-[#FFFFFF]' : 'bg-transparent text-[#FFFFFF]'"
-                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-[#FFFFFF] hover:border-primary whitespace-nowrap"
+                :class="activeTab === 'hr' ? 'bg-[#FF6701] text-[#FFFFFF]' : 'bg-transparent text-[#FFFFFF]'"
+                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-[#FF6701] hover:text-[#FFFFFF] hover:border-[#FF6701] whitespace-nowrap"
             >
                 Human Resources
             </button>
@@ -162,28 +162,16 @@
             <!-- Education -->
             <button 
                 @click="activeTab = 'education'"
-                :class="activeTab === 'education' ? 'bg-primary text-[#FFFFFF]' : 'bg-transparent text-[#FFFFFF]'"
-                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-[#FFFFFF] hover:border-primary whitespace-nowrap"
+                :class="activeTab === 'education' ? 'bg-[#FF6701] text-[#FFFFFF]' : 'bg-transparent text-[#FFFFFF]'"
+                class="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-[#FF6701] hover:text-[#FFFFFF] hover:border-[#FF6701] whitespace-nowrap"
             >
                 Education
             </button>
         </div>
     </div>
 </div>
-
-<style>
-/* Hide scrollbar but keep functionality */
-.scrollbar-hide::-webkit-scrollbar {
-    display: none;
-}
-.scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-</style>
-
     <!-- Bottom Gradient Fade -->
-    <div class="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-t from-[#FFFFFF] to-transparent z-0"></div>
+    <div class="absolute w-full bottom-0 left-0 right-0 h-96 bg-gradient-to-t from-[#FFFFFF]/70 to-transparent z-0"></div>
 
 </section>
 
@@ -507,7 +495,7 @@
         x-show="showProductModal" 
         x-cloak
         @click.self="showProductModal = false"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-[#454452] bg-opacity-50 p-4"
         x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0"
         x-transition:enter-end="opacity-100"
@@ -630,7 +618,7 @@
         x-show="showFormModal" 
         x-cloak
         @click.self="showFormModal = false"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-[#454452] bg-opacity-50 p-4"
         x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0"
         x-transition:enter-end="opacity-100"
@@ -651,8 +639,8 @@
             <!-- Modal Header -->
             <div class="border-b border-[#FFFFFF] p-6 flex items-center justify-between sticky top-0 bg-[#FFFFFF] rounded-t-2xl">
                 <div>
-                    <h3 class="text-2xl font-bold text-[#454452]">Join Our Waitlist</h3>
-                    <p class="text-sm text-[#454452] mt-1">Be the first to know when we launch!</p>
+                    <h3 class="text-2xl font-bold text-[#003686]">Join Our Waitlist</h3>
+                    <p class="text-sm text-[#003686] mt-1">Be the first to know when we launch!</p>
                 </div>
                 <button 
                     @click="closeFormModal()"
@@ -669,11 +657,11 @@
             <form @submit.prevent="submitWaitlist()" class="p-6 space-y-6">
                 
                 <!-- Selected Products Display -->
-                <div class="bg-gradient-to-r from-[#FFFFFF] to-[#FFFFFF] border border-[#FFFFFF] rounded-xl p-4">
+                <div class="bg-gradient-to-r from-[#FFFFFF] to-[#F5F5F5] border border-[#003686] rounded-xl p-4">
                     <p class="text-sm font-semibold text-[#454452] mb-2">Selected Products:</p>
                     <div class="flex flex-wrap gap-2">
                         <template x-for="product in selectedProducts" :key="product">
-                            <span class="bg-[#FFFFFF] text-[#454452] px-3 py-1 rounded-full text-sm font-medium border border-[#FFFFFF]" x-text="getProductName(product)"></span>
+                            <span class="bg-[#FFFFFF] text-[#454452] px-3 py-1 rounded-full text-sm font-medium border border-[#454452]" x-text="getProductName(product)"></span>
                         </template>
                     </div>
                 </div>
@@ -688,7 +676,7 @@
                         id="fullName"
                         x-model="formData.fullName"
                         required
-                        class="w-full px-4 py-3 border-2 border-[#FFFFFF] rounded-lg focus:border-[#FF6701] focus:ring-2 focus:ring-[#FF6701]/40 transition-all duration-300 outline-none"
+                        class="w-full px-4 py-3 border-2 border-[#003686] rounded-lg focus:border-[#FF6701] focus:ring-2 focus:ring-[#FF6701]/40 transition-all duration-300 outline-none"
                         placeholder="John Doe"
                     >
                 </div>
@@ -703,7 +691,7 @@
                         id="email"
                         x-model="formData.email"
                         required
-                        class="w-full px-4 py-3 border-2 border-[#FFFFFF] rounded-lg focus:border-[#FF6701] focus:ring-2 focus:ring-[#FF6701]/60 transition-all duration-300 outline-none"
+                        class="w-full px-4 py-3 border-2 border-[#003686] rounded-lg focus:border-[#FF6701] focus:ring-2 focus:ring-[#FF6701]/60 transition-all duration-300 outline-none"
                         placeholder="john@example.com"
                     >
                 </div>
@@ -717,7 +705,7 @@
                         type="text" 
                         id="company"
                         x-model="formData.company"
-                        class="w-full px-4 py-3 border-2 border-[#FFFFFF] rounded-lg focus:border-[#FF6701] focus:ring-2 focus:ring-[#FF6701]/60 transition-all duration-300 outline-none"
+                        class="w-full px-4 py-3 border-2 border-[#003686] rounded-lg focus:border-[#FF6701] focus:ring-2 focus:ring-[#FF6701]/60 transition-all duration-300 outline-none"
                         placeholder="Your Company Ltd"
                     >
                 </div>
@@ -731,7 +719,7 @@
                         type="tel" 
                         id="phone"
                         x-model="formData.phone"
-                        class="w-full px-4 py-3 border-2 border-[#FFFFFF] rounded-lg focus:border-[#FF6701] focus:ring-2 focus:ring-[#FF6701]/60 transition-all duration-300 outline-none"
+                        class="w-full px-4 py-3 border-2 border-[#003686] rounded-lg focus:border-[#FF6701] focus:ring-2 focus:ring-[#FF6701]/60 transition-all duration-300 outline-none"
                         placeholder="+234 800 000 0000"
                     >
                 </div>
@@ -744,7 +732,7 @@
                     <select 
                         id="businessType"
                         x-model="formData.businessType"
-                        class="w-full px-4 py-3 border-2 border-[#FFFFFF] rounded-lg focus:border-[#FF6701] focus:ring-2 focus:ring-[#FF6701]/60 transition-all duration-300 outline-none"
+                        class="w-full px-4 py-3 border-2 border-[#003686] rounded-lg focus:border-[#FF6701] focus:ring-2 focus:ring-[#FF6701]/60 transition-all duration-300 outline-none"
                     >
                         <option value="">Select business type</option>
                         <option value="startup">Startup</option>
@@ -765,19 +753,19 @@
                         id="notes"
                         x-model="formData.notes"
                         rows="4"
-                        class="w-full px-4 py-3 border-2 border-[#FFFFFF] rounded-lg focus:border-[#FF6701] focus:ring-2 focus:ring-[#FF6701]/60 transition-all duration-300 outline-none resize-none"
+                        class="w-full px-4 py-3 border-2 border-[#003686] rounded-lg focus:border-[#FF6701] focus:ring-2 focus:ring-[#FF6701]/60 transition-all duration-300 outline-none resize-none"
                         placeholder="Tell us more about your needs or expectations..."
                     ></textarea>
                 </div>
 
                 <!-- Email Consent Checkbox -->
-                <div class="bg-[#F7F7FC] border-2 border-[#FFFFFF] rounded-xl p-4">
+                <div class="bg-[#F7F7FC] border-2 border-[#003686] rounded-xl p-4">
                     <label class="flex items-start cursor-pointer">
                         <input 
                             type="checkbox" 
                             x-model="formData.emailConsent"
                             required
-                            class="mt-1 w-5 h-5 text-[#FF6701] border-[#FFFFFF] rounded focus:ring-[#FF6701] focus:ring-2"
+                            class="mt-1 w-5 h-5 text-[#FF6701] border-[#003686] rounded focus:ring-[#FF6701] focus:ring-2"
                         >
                         <div class="ml-3">
                             <span class="text-sm font-semibold text-[#454452]">
@@ -827,7 +815,7 @@
                 <button 
                     type="button"
                     @click="closeFormModal()"
-                    class="flex-1 bg-[#FFFFFF] text-[#454452] px-6 py-3 rounded-lg font-semibold hover:bg-[#FFFFFF] transition-colors duration-300"
+                    class="flex-1 bg-[#454452]/20 text-[#454452] px-6 py-3 rounded-lg shadow-md font-semibold hover:bg-[#FFFFFF] transition-colors duration-300"
                 >
                     Cancel
                 </button>
@@ -853,7 +841,7 @@
 
 
 {{-- Customer Testimonials Section --}}
-<section class="py-16 sm:py-20 lg:py-24 bg-[#F7F7FC]">
+<section class="py-16 sm:py-20 lg:py-24 bg-[#FFFFFF]">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Section Header -->
@@ -864,7 +852,7 @@
         </div>
 
         <!-- Testimonials Container -->
-        <div class="max-w-6xl mx-auto space-y-8">
+        <div class="max-w-6xl mx-auto space-y-8 pb-20">
             
             <!-- Top Testimonial (Centered, Larger) -->
             <div 
@@ -992,26 +980,26 @@
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
                     
-                    <!-- Button 1: Request Customization -->
+                    <!-- Request Customization -->
                     <a 
                         href=""
-                        class="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 border-2 border-[#FF6701] rounded-lg font-semibold text-[#FF6701] bg-[#FFFFFF] hover:bg-[#FF6701] hover:text-[#FFFFFF] transition-all duration-300 shadow-sm hover:shadow-md"
+                        class="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 border-2 border-[#FF6701] rounded-lg font-semibold text-[#FF6701] bg-[#FFFFFF] hover:bg-[#FF6701] hover:text-[#FFFFFF] transition-all duration-300 shadow-md hover:shadow-md"
                     >
                         <span>Request Customization</span>
                     </a>
 
-                    <!-- Button 2: Schedule Consultation -->
+                    <!-- Schedule Consultation -->
                     <a 
                         href=""
-                        class="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 border-2 border-[#FF6701] rounded-lg font-semibold text-[#FF6701] bg-[#FFFFFF] hover:bg-[#FF6701] hover:text-[#FFFFFF] transition-all duration-300 shadow-sm hover:shadow-md"
+                        class="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 border-2 border-[#FF6701] rounded-lg font-semibold text-[#FF6701] bg-[#FFFFFF] hover:bg-[#FF6701] hover:text-[#FFFFFF] transition-all duration-300 shadow-md hover:shadow-md"
                     >
                         <span>Schedule Consultation</span>
                     </a>
 
-                    <!-- Button 3: Contact Sales -->
+                    <!--  Contact Sales -->
                     <a 
                         href=""
-                        class="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 border-2 border-[#FF6701] rounded-lg font-semibold text-[#FF6701] bg-[#FFFFFF] hover:bg-[#FF6701] hover:text-[#FFFFFF] transition-all duration-300 shadow-sm hover:shadow-md"
+                        class="group w-full sm:w-auto inline-flex items-center shadow-md justify-center px-8 py-3.5 border-2 border-[#FF6701] rounded-lg font-semibold text-[#FF6701] bg-[#ffffff]  hover:bg-[#FF6701] hover:text-[#FFFFFF] transition-all duration-300 hover:shadow-md"
                     >
                         <span>Contact Sales</span>
                     </a>
@@ -1026,6 +1014,16 @@
 
 @include('components.footer')
 
+<style>
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+</style>
 
 <script>
 function waitlistManager() {
