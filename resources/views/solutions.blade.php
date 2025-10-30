@@ -7,18 +7,20 @@
 @section('content')
 
 <!-- Hero Section with Background -->
-<section class="relative min-h-screen bg-[#454452] overflow-hidden">
+<section class="relative min-h-screen pb-8 bg-[#454452] overflow-hidden">
     
     <!-- Background Image with Overlay -->
-    <div class="absolute inset-0 h-screen -z-0">
+    <div class="absolute inset-0 min-h-screen -z-0">
         <!-- Background Image -->
         <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" 
              style="background-image: url('{{ asset('images/solutions.png') }}');">
         </div>
     </div>
 
+       <!-- Bottom Gradient Fade -->
+    <div class="absolute w-full bottom-0 left-0 right-0 h-44 bg-gradient-to-t from-[#FFFFFF]/70 to-transparent z-0"></div>
     <!--Dark Overlay-->
-        <div class="absolute inset-0 bg-[#454452]"></div>
+        <div class="absolute inset-0 bg-[#454452]/30"></div>
 
     <!-- Content Container -->
     <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
@@ -170,10 +172,8 @@
         </div>
     </div>
 </div>
-    <!-- Bottom Gradient Fade -->
-    <div class="absolute w-full bottom-0 left-0 right-0 h-96 bg-gradient-to-t from-[#FFFFFF]/70 to-transparent z-0"></div>
-
 </section>
+ 
 
 {{-- Products Waitlist Section --}}
 <section class="py-16 sm:py-20 lg:py-24 bg-[#F7F7FC]" x-data="waitlistManager()">

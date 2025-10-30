@@ -23,7 +23,7 @@
             </div>
             
             <!-- Desktop Navigation -->
-            <div class="hidden lg:flex gap-6 lg:items-center lg:space-x-8">
+            <div class="hidden lg:flex gap-8 lg:items-center lg:space-x-8">
                 <a 
                     href="{{ route('home') }}" 
                     class="font-medium text-md transition-colors duration-200"
@@ -77,7 +77,7 @@
                     @click="mobileMenuOpen = !mobileMenuOpen"
                     type="button" 
                     class="inline-flex items-center justify-center p-2 text-[#BFCDE1] hover:text-[#FF6701] rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#BFCDE1] transition-colors"
-                    :class="scrolled ? 'text-[#FF6701]' : 'text-white hover:text-[#FF6701]'"
+                    :class="scrolled ? 'text-[#FF6701]' : 'text-[#FFFFFF] hover:text-[#FF6701]'"
                     aria-expanded="false"
                     :aria-expanded="mobileMenuOpen.toString()"
                 >

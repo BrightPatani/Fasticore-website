@@ -364,9 +364,7 @@
                 x-transition:enter-end="opacity-100 transform translate-y-0"
             >
                 <div class="relative pt-16 pb-8">
-                    <!-- Orange Background Layer -->
-                    <div class="absolute inset-0 top-12 bg-[#FF6701] rounded-3xl shadow-lg transform scale-x-105 scale-y-105"></div>
-                    
+                                       
                     <!-- [#FFFFFF] Card Layer (Front) -->
                     <div class="relative bg-[#FFFFFF] rounded-3xl shadow-xl p-8 pt-20 hover:shadow-2xl transition-all duration-300">
                         
@@ -374,7 +372,7 @@
                         <div class="absolute -top-14 left-1/2 transform -translate-x-1/2">
                             <div class="w-32 h-32 rounded-full border-4 border-[#FFFFFF] shadow-2xl overflow-hidden bg-gradient-to-br from-orange-200 to-orange-400">
                                 <img 
-                                    src="{{ asset('images/team/anih-victor.jpg') }}" 
+                                    src="{{ asset('images/team/anih.png') }}" 
                                     alt="Anih Victor" 
                                     class="w-full h-full object-cover"
                                     loading="lazy"
@@ -409,8 +407,7 @@
             >
                 <div class="relative pt-16 pb-8">
 
-                    <div class="absolute inset-0 top-12 bg-[#FF6701] rounded-full shadow-lg transform scale-x-90 scale-y-105"></div>
-                    
+                                    
                     
                     <div class="relative bg-[#FFFFFF] rounded-3xl shadow-xl p-8 pt-20 shadow-lg transition-all duration-300 scale-x-100 scale-y-105">
                         
@@ -418,7 +415,7 @@
                         <div class="absolute -top-14 left-1/2 transform -translate-x-1/2">
                             <div class="w-32 h-32 rounded-full border-4 border-[#FFFFFF] shadow-2xl overflow-hidden bg-gradient-to-br from-orange-200 to-orange-400">
                                 <img 
-                                    src="{{ asset('images/team/samuel-otikor.jpg') }}" 
+                                    src="{{ asset('images/team/otikor.png') }}" 
                                     alt="Samuel Otikor" 
                                     class="w-full h-full object-cover"
                                     loading="lazy"
@@ -435,7 +432,7 @@
                                 Chief Operations Officer
                             </p>
                             <p class="text-[#454452] leading-relaxed text-sm sm:text-base">
-                                With 6+ years in operations management, Samuel excels in streamlining processes, operations and managing complex projects, ensuring seamless delivery.
+                                With 6+ years  in operations management,Samuel excels at overseeing day-to-day operations and managing complex projects, ensuring seamless delivery 
                             </p>
                         </div>
                     </div>
@@ -457,9 +454,7 @@
                 x-transition:enter-end="opacity-100 transform translate-y-0"
             >
                 <div class="relative pt-16 pb-8">
-                    <!-- Orange Background Layer -->
-                    <div class="absolute inset-0 top-12 bg-[#FF6701] rounded-full shadow-lg transform scale-x-90 scale-y-105"></div>
-                    
+                                       
                     <!-- [#FFFFFF] Card Layer (Front) -->
                     <div class="relative bg-[#FFFFFF] rounded-3xl shadow-xl p-8 pt-20 shadow-lg transition-all duration-300 scale-x-100 scale-y-105">
                         
@@ -467,7 +462,7 @@
                         <div class="absolute -top-14 left-1/2 transform -translate-x-1/2">
                             <div class="w-32 h-32 rounded-full border-4 border-[#FFFFFF] shadow-2xl overflow-hidden bg-gradient-to-br from-green-200 to-green-400">
                                 <img 
-                                    src="{{ asset('images/team/justin.jpg') }}" 
+                                    src="{{ asset('images/team/justin.png') }}" 
                                     alt="Justin" 
                                     class="w-full h-full object-cover"
                                     loading="lazy"
@@ -501,9 +496,7 @@
                 x-transition:enter-end="opacity-100 transform translate-y-0"
             >
                 <div class="relative pt-16 pb-8">
-                    <!-- Orange Background Layer -->
-                    <div class="absolute inset-0 top-12 bg-[#FF6701] rounded-3xl shadow-lg transform scale-x-105 scale-y-105"></div>
-                    
+                                       
                     <!-- [#FFFFFF] Card Layer (Front) -->
                     <div class="relative bg-[#FFFFFF] rounded-3xl shadow-xl p-6 pt-20 hover:shadow-2xl transition-all duration-300">
                         
@@ -511,7 +504,7 @@
                         <div class="absolute -top-14 left-1/2 transform -translate-x-1/2">
                             <div class="w-32 h-32 rounded-full border-4 border-[#FFFFFF] shadow-2xl overflow-hidden bg-gradient-to-br from-blue-200 to-blue-400">
                                 <img 
-                                    src="{{ asset('images/team/bright.jpg') }}" 
+                                    src="{{ asset('images/team/bright.png') }}" 
                                     alt="Bright" 
                                     class="w-full h-full object-cover"
                                     loading="lazy"
@@ -545,9 +538,7 @@
                 x-transition:enter-end="opacity-100 transform translate-y-0"
             >
                 <div class="relative pt-16 pb-8">
-                    <!-- Orange Background Layer -->
-                    <div class="absolute inset-0 top-12 bg-[#FF6701] rounded-3xl shadow-lg transform scale-x-105 scale-y-105"></div>
-                    
+                                        
                     <!-- [#FFFFFF] Card Layer (Front) -->
                     <div class="relative bg-[#FFFFFF] rounded-3xl shadow-xl p-6 pt-20 hover:shadow-2xl transition-all duration-300">
                         
@@ -555,7 +546,7 @@
                         <div class="absolute -top-14 left-1/2 transform -translate-x-1/2">
                             <div class="w-32 h-32 rounded-full border-4 border-[#FFFFFF] shadow-2xl overflow-hidden bg-gradient-to-br from-purple-200 to-purple-400">
                                 <img 
-                                    src="{{ asset('images/team/chigozie-otoju.jpg') }}" 
+                                    src="{{ asset('images/team/bright.png') }}" 
                                     alt="Chigozie Otoju" 
                                     class="w-full h-full object-cover"
                                     loading="lazy"
@@ -630,7 +621,7 @@
                                 <!-- Avatar -->
                                 <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden bg-gradient-to-br from-blue-200 to-blue-400 flex-shrink-0 border-2 border-[#FFFFFF] shadow-md">
                                     <img 
-                                        src="{{ asset('images/testimonials/andrew-davis.jpg') }}" 
+                                        src="{{ asset('images/testimonials/davies.png') }}" 
                                         alt="Andrew Davis" 
                                         class="w-full h-full object-cover"
                                     >
@@ -674,7 +665,7 @@
                                 <!-- Avatar -->
                                 <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden bg-gradient-to-br from-pink-200 to-pink-400 flex-shrink-0 border-2 border-[#FFFFFF] shadow-md">
                                     <img 
-                                        src="{{ asset('images/testimonials/lisa-johnson.jpg') }}" 
+                                        src="{{ asset('images/testimonials/lisa.png') }}" 
                                         alt="Lisa Johnson" 
                                         class="w-full h-full object-cover"
                                     >
@@ -724,7 +715,7 @@
                                     <!-- Avatar -->
                                     <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden bg-gradient-to-br from-[#454452] to-gray-400 flex-shrink-0 border-2 border-[#FFFFFF] shadow-md">
                                         <img 
-                                            src="{{ asset('images/testimonials/robert-martinez.jpg') }}" 
+                                            src="{{ asset('images/testimonials/robert.png') }}" 
                                             alt="Robert Martinez" 
                                             class="w-full h-full object-cover"
                                         >
