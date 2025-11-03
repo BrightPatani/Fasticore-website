@@ -92,20 +92,20 @@
                     </div>
                     
                     <!-- Desktop Navigation -->
-                    <div class="hidden lg:flex lg:items-center lg:space-x-8">
-                        <a href="{{ route('home') }}" class="text-[#454452] hover:text-[#FF6701] font-medium text-sm transition-colors duration-200 {{ request()->routeIs('home') ? 'text-[#FF6701]' : '' }}">
+                    <div class="hidden lg:flex lg:items-center lg:space-x-16">
+                        <a href="{{ route('home') }}" class="text-[#454452] hover:text-[#FF6701] font-medium text-md transition-colors duration-200 {{ request()->routeIs('home') ? 'text-[#FF6701]' : '' }}">
                             HOME
                         </a>
-                        <a href="{{ route('services') }}" class="text-[#454452] hover:text-[#FF6701] font-medium text-sm transition-colors duration-200 {{ request()->routeIs('services') ? 'text-[#FF6701]' : '' }}">
+                        <a href="{{ route('services') }}" class="text-[#454452] hover:text-[#FF6701] font-medium text-md transition-colors duration-200 {{ request()->routeIs('services') ? 'text-[#FF6701]' : '' }}">
                             SERVICES
                         </a>
-                        <a href="{{ route('solutions') }}" class="text-[#454452] hover:text-[#FF6701] font-medium text-sm transition-colors duration-200 {{ request()->routeIs('solutions') ? 'text-[#FF6701]' : '' }}">
+                        <a href="{{ route('solutions') }}" class="text-[#454452] hover:text-[#FF6701] font-medium text-md transition-colors duration-200 {{ request()->routeIs('solutions') ? 'text-[#FF6701]' : '' }}">
                             SOLUTIONS
                         </a>
-                        <a href="{{ route('academy') }}" class="text-[#454452] hover:text-[#FF6701] font-medium text-sm transition-colors duration-200 {{ request()->routeIs('academy') ? 'text-[#FF6701]' : '' }}">
+                        <a href="{{ route('academy') }}" class="text-[#454452] hover:text-[#FF6701] font-medium text-md transition-colors duration-200 {{ request()->routeIs('academy') ? 'text-[#FF6701]' : '' }}">
                             ACADEMY
                         </a>
-                        <a href="{{ route('about') }}" class="text-[#454452] hover:text-[#FF6701] font-medium text-sm transition-colors duration-200 {{ request()->routeIs('about') ? 'text-[#FF6701]' : '' }}">
+                        <a href="{{ route('about') }}" class="text-[#454452] hover:text-[#FF6701] font-medium text-md transition-colors duration-200 {{ request()->routeIs('about') ? 'text-[#FF6701]' : '' }}">
                             ABOUT US
                         </a>
                     </div>

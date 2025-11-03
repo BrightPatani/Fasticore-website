@@ -23,7 +23,7 @@
             </div>
             
             <!-- Desktop Navigation -->
-            <div class="hidden lg:flex gap-8 lg:items-center lg:space-x-8">
+            <div class="hidden lg:flex gap-8 lg:items-center lg:space-x-16">
                 <a 
                     href="{{ route('home') }}" 
                     class="font-medium text-md transition-colors duration-200"
