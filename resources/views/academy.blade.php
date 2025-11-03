@@ -160,13 +160,7 @@
                     x-transition:enter-end="opacity-100 transform translate-y-0"
                 >
                     <div class="bg-[#FFFFFF] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 sm:p-10 max-w-2xl w-full border-l-4 border-orange-500">
-                        <!-- Quote Icon -->
-                        <div class="mb-4">
-                            <svg class="w-10 h-10 text-orange-500 opacity-50" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
-                            </svg>
-                        </div>
-
+  
                         <!-- Quote Text -->
                         <p class="text-[#454452] text-base sm:text-lg leading-relaxed mb-6 italic">
                             “The UI/UX sessions were a game changer for me. I built a real portfolio and got hired within 2 months of graduating.”
@@ -196,12 +190,7 @@
                         x-transition:enter-start="opacity-0 transform translate-y-8"
                         x-transition:enter-end="opacity-100 transform translate-y-0"
                     >
-                        <!-- Quote Icon -->
-                        <div class="mb-4">
-                            <svg class="w-8 h-8 text-orange-500 opacity-50" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
-                            </svg>
-                        </div>
+                  
 
                         <!-- Quote Text -->
                         <p class="text-[#454452] text-base leading-relaxed mb-6 italic">
@@ -228,12 +217,7 @@
                         x-transition:enter-start="opacity-0 transform translate-y-8"
                         x-transition:enter-end="opacity-100 transform translate-y-0"
                     >
-                        <!-- Quote Icon -->
-                        <div class="mb-4">
-                            <svg class="w-8 h-8 text-orange-500 opacity-50" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
-                            </svg>
-                        </div>
+                   
 
                         <!-- Quote Text -->
                         <p class="text-[#454452] text-base leading-relaxed mb-6 italic">
@@ -258,198 +242,10 @@
         </div>
     </section>
 
-    <!-- resources/views/components/internship-registration-form.blade.php -->
+    
 
 <!-- Registration Form Section -->
-<section class="py-16 sm:py-20 lg:py-24 bg-#FFFFFF">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto">
-            
-            <!-- Form Header -->
-            <div class="mb-12 text-center">
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-dark-900 mb-4">
-                    Register for the Next Internship
-                </h2>
-            </div>
-
-            <!-- Registration Form Card -->
-            <div 
-                class="bg-transparent rounded-2xl p-8 sm:p-12"
-                x-data="{ 
-                    loading: false,
-                    success: false,
-                    error: '',
-                    formData: {
-                        full_name: '',
-                        email: '',
-                        track: '',
-                        background: ''
-                    },
-                    submitForm() {
-                        this.loading = true;
-                        this.error = '';
-                        
-                        // Basic validation
-                        if (!this.formData.full_name || !this.formData.email || !this.formData.track) {
-                            this.error = 'Please fill in all required fields';
-                            this.loading = false;
-                            return;
-                        }
-
-                        // Email validation
-                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                        if (!emailRegex.test(this.formData.email)) {
-                            this.error = 'Please enter a valid email address';
-                            this.loading = false;
-                            return;
-                        }
-
-                        {{-- // Submit to server '{{ route('internship.register') }} --}}
-                        fetch('#', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                                'X-CSRF-TOKEN': document.querySelector('meta[name=csrf-token]').content
-                            },
-                            body: JSON.stringify(this.formData)
-                        })
-                        .then(response => response.json())
-                        .then(data => {
-                            if (data.success) {
-                                this.success = true;
-                                this.formData = { full_name: '', email: '', track: '', background: '' };
-                            } else {
-                                this.error = data.message || 'Something went wrong. Please try again.';
-                            }
-                            this.loading = false;
-                        })
-                        .catch(error => {
-                            this.error = 'Network error. Please check your connection and try again.';
-                            this.loading = false;
-                        });
-                    }
-                }"
-            >
-                <!-- Success Message -->
-                <div 
-                    x-show="success" 
-                    x-cloak
-                    class="mb-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-lg"
-                >
-                    <div class="flex items-center">
-                        <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <div>
-                            <p class="font-semibold text-green-800">Registration Successful!</p>
-                            <p class="text-sm text-green-700">We'll contact you soon with more details.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Error Message -->
-                <div 
-                    x-show="error" 
-                    x-cloak
-                    class="mb-6 p-4 bg-red-50 border-l-4 border-red-500 rounded-lg"
-                >
-                    <div class="flex items-center">
-                        <svg class="w-6 h-6 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <p class="text-sm text-red-700" x-text="error"></p>
-                    </div>
-                </div>
-
-                <form @submit.prevent="submitForm" class="space-y-6">
-                    
-                    <!-- Full Name Field -->
-                    <div>
-                        <label for="full_name" class="block text-sm font-semibold text-dark-900 mb-2">
-                            Full Name<span class="text-red-500">*</span>
-                        </label>
-                        <input 
-                            type="text" 
-                            id="full_name"
-                            x-model="formData.full_name"
-                            required
-                            class="w-full px-4 py-3 border border-[#E2E2E2] rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                        >
-                    </div>
-
-                    <!-- Email Address Field -->
-                    <div>
-                        <label for="email" class="block text-sm font-semibold text-dark-900 mb-2">
-                            Email Address<span class="text-red-500">*</span>
-                        </label>
-                        <input 
-                            type="email" 
-                            id="email"
-                            x-model="formData.email"
-                            required
-                            class="w-full px-4 py-3 border border-[#E2E2E2] rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                        >
-                    </div>
-
-                    <!-- Preferred Track Dropdown -->
-                    <div>
-                        <label for="track" class="block text-sm font-semibold text-dark-900 mb-2">
-                            Preferred Track<span class="text-red-500">*</span>
-                        </label>
-                        <select 
-                            id="track"
-                            x-model="formData.track"
-                            required
-                            class="w-full px-4 py-3 border border-[#E2E2E2] rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all appearance-none bg-[#FFFFFF] cursor-pointer"
-                            style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.5em 1.5em; padding-right: 3rem;"
-                        >
-                            <option value="" disabled selected>Select a track</option>
-                            <option value="frontend">Frontend Development</option>
-                            <option value="backend">Backend Development</option>
-                            <option value="fullstack">Full-Stack Development</option>
-                            <option value="uiux">UI/UX Design</option>
-                            <option value="mobile">Mobile Development</option>
-                        </select>
-                    </div>
-
-                    <!-- Background Textarea -->
-                    <div>
-                        <label for="background" class="block text-sm font-semibold text-dark-900 mb-2">
-                            Tell us About Your Background <span class="text-[#FFFFFF]0 font-normal">(Optional)</span>
-                        </label>
-                        <textarea 
-                            id="background"
-                            x-model="formData.background"
-                            rows="5"
-                            placeholder="Share your experience or motivation..."
-                            class="w-full px-4 py-3 border border-[#E2E2E2] rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
-                        ></textarea>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <div>
-                        <button 
-                            type="submit"
-                            :disabled="loading"
-                            :class="loading ? 'opacity-70 cursor-not-allowed' : 'hover:bg-primary-600'"
-                            class="w-full px-8 py-4 bg-primary text-[#FFFFFF] font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
-                        >
-                            <span x-show="!loading">Register Now</span>
-                            <span x-show="loading" x-cloak class="flex items-center justify-center">
-                                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-[#FFFFFF]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                                </svg>
-                                Processing...
-                            </span>
-                        </button>
-                    </div>
-                </form>
-            </div>
-
-        </div>
-    </div>
-</section>
+@include('components.internship')
 
 
 

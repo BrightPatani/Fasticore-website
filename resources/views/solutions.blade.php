@@ -7,7 +7,7 @@
 @section('content')
 
 <!-- Hero Section with Background -->
-<section class="relative min-h-screen pb-8 bg-[#454452] overflow-hidden">
+<section class="relative min-h-screen pb-8 bg-[#454452] overflow-hidden z-0">
     
     <!-- Background Image with Overlay -->
     <div class="absolute inset-0 min-h-screen -z-0">
@@ -863,14 +863,7 @@
                 x-transition:enter-start="opacity-0 transform translate-y-8"
                 x-transition:enter-end="opacity-100 transform translate-y-0"
             >
-                <div class="bg-[#FFFFFF] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 sm:p-10 max-w-2xl w-full border-l-4 border-[#FF6701]">
-                    <!-- Quote Icon -->
-                    <div class="mb-4">
-                        <svg class="w-10 h-10 text-[#FF6701] opacity-50" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
-                        </svg>
-                    </div>
-
+                <div class="bg-[#FFFFFF] shadow-lg rounded-tr-[45px] rounded-bl-[45px] rounded-tl-[15px] rounded-br-[15px] hover:shadow-xl transition-all duration-300 p-8 sm:p-10 w-[45%] h-72 border-l-4 border-[#FF6701]">
                     <!-- Quote Text -->
                     <p class="text-[#454452] text-base sm:text-lg leading-relaxed mb-6 italic">
                         "FastiBooks made our accounting so much simpler. What used to take hours now takes minutes. Perfect for small business owners like me."
@@ -878,7 +871,7 @@
 
                     <!-- Author Info -->
                     <div class="border-t border-[#FFFFFF] pt-6">
-                        <h4 class="text-xl font-bold text-[#454452] mb-1">
+                        <h4 class="text-xl font-bold text-[#454452] mb-2">
                             Michael Chen
                         </h4>
                         <p class="text-[#FF6701] font-medium text-sm">
@@ -893,22 +886,15 @@
                 
                 <!-- Testimonial 2 -->
                 <div 
-                    class="bg-[#FFFFFF] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border-l-4 border-[#FF6701]"
+                    class="bg-[#FFFFFF] h-72 rounded-tr-[45px] rounded-bl-[45px] rounded-tl-[15px] rounded-br-[15px] shadow-lg hover:shadow-xl transition-all duration-300 p-8 border-l-4 border-[#FF6701]"
                     x-data="{ visible: false }"
                     x-intersect="visible = true"
                     x-transition:enter="transition ease-out duration-700 delay-100"
                     x-transition:enter-start="opacity-0 transform translate-y-8"
                     x-transition:enter-end="opacity-100 transform translate-y-0"
                 >
-                    <!-- Quote Icon -->
-                    <div class="mb-4">
-                        <svg class="w-8 h-8 text-[#FF6701] opacity-50" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
-                        </svg>
-                    </div>
-
-                    <!-- Quote Text -->
-                    <p class="text-[#454452] text-base leading-relaxed mb-6 italic">
+                          <!-- Quote Text -->
+                    <p class="text-[#454452] text-md leading-relaxed mb-6 mx-auto mt-12 italic">
                         "FastiProject helped our remote team stay organized and productive. The collaboration features are exactly what we needed."
                     </p>
 
@@ -925,22 +911,15 @@
 
                 <!-- Testimonial 3 -->
                 <div 
-                    class="bg-[#FFFFFF] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border-l-4 border-[#FF6701]"
+                    class="bg-[#FFFFFF] h-72 rounded-tr-[45px] rounded-bl-[45px] rounded-tl-[15px] rounded-br-[15px] shadow-lg hover:shadow-xl transition-all duration-300 p-8 border-l-4 border-[#FF6701]"
                     x-data="{ visible: false }"
                     x-intersect="visible = true"
                     x-transition:enter="transition ease-out duration-700 delay-200"
                     x-transition:enter-start="opacity-0 transform translate-y-8"
                     x-transition:enter-end="opacity-100 transform translate-y-0"
                 >
-                    <!-- Quote Icon -->
-                    <div class="mb-4">
-                        <svg class="w-8 h-8 text-[#FF6701] opacity-50" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
-                        </svg>
-                    </div>
-
                     <!-- Quote Text -->
-                    <p class="text-[#454452] text-base leading-relaxed mb-6 italic">
+                    <p class="text-[#454452] text-base leading-relaxed mb-6 mt-12 mx-auto italic">
                         "FastiCRM Pro transformed how we manage customer relationships. We've seen a 40% increase in lead conversion since implementing it."
                     </p>
 

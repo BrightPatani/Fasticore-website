@@ -47,14 +47,12 @@
                         Our Story
                     </h2>
                     <p class="text-[#ffffff] leading-relaxed text-sm sm:text-base lg:text-lg">
-                        Fasticore Technology began in September 2021 with a vision to build meaningful
-                        solutions while serving businesses and training talents. What started as a small
-                        training initiative with five students quickly grew into larger partnerships,
-                        including training over 150 students with ELabsafrica in 2023. Later that year, we
-                        formally incorporated as Fasticore Technology Limited. By 2024, our focus shifted
-                        to talent development and creating AI-powered business solutions. Now, we build
-                        practical, scalable, and impactful AI solutions for Africa, supported by a talent
-                        pipeline from our academy and validated through real-world client services.
+                        Fasticore Technology began in September 2021 with a vision to  build meaningful solutions while serving businesses and 
+                        training talents  What started as a small training initiative with five students quickly grew into larger partnerships,
+                        including training over 150 students with ELabsafrica in 2023. Later that year, we formally incorporated as Fasticore 
+                        Technology Limited. By 2024, our focus shifted to talent development and creating AI-powered business solution products. 
+                        Now, we build practical, scalable, and impactful AI-powered solutions for Africa, supported by a talent pipeline from our 
+                        academy and validated through real-world client services. 
                     </p>
                 </div>
             </div>
@@ -196,10 +194,6 @@
     </div>
 </section>
 
-<style>
-.scrollbar-hide::-webkit-scrollbar { display: none; }
-.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-</style>
 
 
 <!-- Our Key Strength Section -->
@@ -215,7 +209,8 @@
             
             <!-- Card 1: Full Stack Enterprise -->
             <div 
-                class="bg-[#5A5A6B] rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg"
+                class="bg-[#5A5A6B] p-6 sm:p-8 lg:p-10 shadow-lg  rounded-tr-[45px] rounded-bl-[45px]
+                rounded-tl-[15px] rounded-br-[15px]"
                 x-data="{ visible: false }"
                 x-intersect="visible = true"
                 x-transition:enter="transition ease-out duration-700"
@@ -246,7 +241,8 @@
             
             <!-- Card 2: Scalable Architecture -->
             <div 
-                class="bg-[#5A5A6B] rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg"
+                class="bg-[#5A5A6B] rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg rounded-tr-[45px] rounded-bl-[45px]
+                rounded-tl-[15px] rounded-br-[15px]"
                 x-data="{ visible: false }"
                 x-intersect="visible = true"
                 x-transition:enter="transition ease-out duration-700 delay-100"
@@ -277,7 +273,8 @@
 
             <!-- Card 3: Cross Platform Development -->
             <div 
-                class="bg-[#5A5A6B] rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg"
+                class="bg-[#5A5A6B] rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg rounded-tr-[45px] rounded-bl-[45px]
+                rounded-tl-[15px] rounded-br-[15px]"
                 x-data="{ visible: false }"
                 x-intersect="visible = true"
                 x-transition:enter="transition ease-out duration-700 delay-200"
@@ -308,7 +305,8 @@
 
             <!-- Card 4: Cloud Native Solution -->
             <div 
-                class="bg-[#5A5A6B] rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg"
+                class="bg-[#5A5A6B] rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg rounded-tr-[45px] rounded-bl-[45px]
+                rounded-tl-[15px] rounded-br-[15px]"
                 x-data="{ visible: false }"
                 x-intersect="visible = true"
                 x-transition:enter="transition ease-out duration-700 delay-300"
@@ -456,7 +454,7 @@
                 <div class="relative pt-16 pb-8">
                                        
                     <!-- [#FFFFFF] Card Layer (Front) -->
-                    <div class="relative bg-[#FFFFFF] rounded-3xl shadow-xl p-8 pt-20 shadow-lg transition-all duration-300 scale-x-100 scale-y-105">
+                    <div class="relative bg-[#FFFFFF] h-96 rounded-3xl p-8 pt-20 shadow-lg transition-all duration-300 scale-x-100 scale-y-105">
                         
                         <!-- Avatar (overlapping top) -->
                         <div class="absolute -top-14 left-1/2 transform -translate-x-1/2">
@@ -498,7 +496,7 @@
                 <div class="relative pt-16 pb-8">
                                        
                     <!-- [#FFFFFF] Card Layer (Front) -->
-                    <div class="relative bg-[#FFFFFF] rounded-3xl shadow-xl p-6 pt-20 hover:shadow-2xl transition-all duration-300">
+                    <div class="relative bg-[#FFFFFF] h-96 rounded-3xl shadow-xl p-6 pt-20 hover:shadow-2xl transition-all duration-300">
                         
                         <!-- Avatar (overlapping top) -->
                         <div class="absolute -top-14 left-1/2 transform -translate-x-1/2">
@@ -537,10 +535,10 @@
                 x-transition:enter-start="opacity-0 transform -translate-y-12"
                 x-transition:enter-end="opacity-100 transform translate-y-0"
             >
-                <div class="relative pt-16 pb-8">
+                <div class="relative pt-16 pb-8 ">
                                         
                     <!-- [#FFFFFF] Card Layer (Front) -->
-                    <div class="relative bg-[#FFFFFF] rounded-3xl shadow-xl p-6 pt-20 hover:shadow-2xl transition-all duration-300">
+                    <div class="relative bg-[#FFFFFF] h-96 rounded-3xl shadow-xl p-6 pt-20 hover:shadow-2xl transition-all duration-300">
                         
                         <!-- Avatar (overlapping top) -->
                         <div class="absolute -top-14 left-1/2 transform -translate-x-1/2">
@@ -597,22 +595,16 @@
                         
                         <!-- Testimonial 1: Andrew Davis -->
                         <div 
-                            class="group relative bg-[#FFFFFF] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 sm:p-8 border-l-4 border-[#FF6701]"
+                            class="group relative bg-[#FFFFFF] rounded-tr-[45px] rounded-bl-[45px] rounded-tl-[15px] rounded-br-[15px] shadow-lg hover:shadow-xl transition-all duration-300 p-6 sm:p-8 border-l-4 border-[#FF6701]"
                             x-data="{ visible: false }"
                             x-intersect="visible = true"
                             x-transition:enter="transition ease-out duration-700"
                             x-transition:enter-start="opacity-0 transform -translate-y-8"
                             x-transition:enter-end="opacity-100 transform translate-y-0"
                         >
-                            <!-- Quote Icon -->
-                            <div class="absolute top-4 sm:top-6 right-4 sm:right-6 text-[#FF6701] opacity-10">
-                                <svg class="w-10 h-10 sm:w-12 sm:h-12" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                                </svg>
-                            </div>
 
                             <!-- Testimonial Text -->
-                            <p class="text-[#454452] text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 relative z-10">
+                            <p class="text-[#454452] text-md sm:text-base leading-relaxed mb-6 sm:mb-8 relative z-10">
                                 "The mobile app Fasticore developed for us has significantly improved our customer engagement. The user interface is intuitive, and the performance is outstanding. Their post-launch support has been exceptional."
                             </p>
 
@@ -641,22 +633,15 @@
 
                         <!-- Testimonial 2: Lisa Johnson -->
                         <div 
-                            class="group relative bg-[#FFFFFF] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 sm:p-8 border-l-4 border-[#FF6701]"
+                            class="group relative bg-[#FFFFFF] rounded-tr-[45px] rounded-bl-[45px] rounded-tl-[15px] rounded-br-[15px] shadow-lg hover:shadow-xl transition-all duration-300 p-6 sm:p-8 border-l-4 border-[#FF6701]"
                             x-data="{ visible: false }"
                             x-intersect="visible = true"
                             x-transition:enter="transition ease-out duration-700 delay-100"
                             x-transition:enter-start="opacity-0 transform -translate-y-8"
                             x-transition:enter-end="opacity-100 transform translate-y-0"
                         >
-                            <!-- Quote Icon -->
-                            <div class="absolute top-4 sm:top-6 right-4 sm:right-6 text-[#FF6701] opacity-10">
-                                <svg class="w-10 h-10 sm:w-12 sm:h-12" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                                </svg>
-                            </div>
-
-                            <!-- Testimonial Text -->
-                            <p class="text-[#454452] text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 relative z-10">
+                             <!-- Testimonial Text -->
+                            <p class="text-[#454452] text-md sm:text-base leading-relaxed mb-6 sm:mb-8 relative z-10">
                                 "Working with Fasticore has been a game-changer for our startup. They not only built an amazing product but also provided valuable insights that helped shape our business strategy. Highly recommended!"
                             </p>
 
@@ -696,17 +681,10 @@
                             x-transition:enter-end="opacity-100 transform translate-y-0"
                         >
                             <!-- Testimonial 3: Robert Martinez -->
-                            <div class="group relative bg-[#FFFFFF] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 sm:p-8 border-l-4 border-[#FF6701]">
+                            <div class="group relative bg-[#FFFFFF] rounded-tr-[45px] rounded-bl-[45px] rounded-tl-[15px] rounded-br-[15px] shadow-lg hover:shadow-xl transition-all duration-300 p-6 sm:p-8 border-l-4 border-[#FF6701]">
                                 
-                                <!-- Quote Icon -->
-                                <div class="absolute top-4 sm:top-6 right-4 sm:right-6 text-[#FF6701] opacity-10">
-                                    <svg class="w-10 h-10 sm:w-12 sm:h-12" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                                    </svg>
-                                </div>
-
                                 <!-- Testimonial Text -->
-                                <p class="text-[#454452] text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 relative z-10">
+                                <p class="text-[#454452] text-md sm:text-base leading-relaxed mb-6 sm:mb-8 relative z-10">
                                     "Fasticore Technology transformed our outdated legacy system into a modern, scalable platform. Their attention to detail and technical expertise exceeded our expectations. The project was delivered on time and within budget."
                                 </p>
 
@@ -869,7 +847,7 @@
                             <h3 class="text-xl font-bold text-[#454452]">Next Gen Ecommerce Platform</h3>
                         </div>
                         <div class="px-6 py-6">
-                            <p class="text-[#454452] p-4 text-sm leading-relaxed">A comprehensive online marketplace with advanced features including AI-powered recommendations, real-time inventory management, and seamless payment integration.</p>
+                            <p class="text-[#454452] p-4 text-md leading-relaxed">A comprehensive online marketplace with advanced features including AI-powered recommendations, real-time inventory management, and seamless payment integration.</p>
                         </div>
                     </div>
                 </article>
@@ -884,7 +862,7 @@
                             <h3 class="text-xl font-bold text-[#454452]">Smart Healthcare Management</h3>
                         </div>
                         <div class="px-6 py-6">
-                            <p class="text-[#454452] p-4 text-sm leading-relaxed">An integrated healthcare platform that streamlines patient management, appointment scheduling, and electronic medical records with enhanced security and compliance features.</p>
+                            <p class="text-[#454452] p-4 text-md leading-relaxed">An integrated healthcare platform that streamlines patient management, appointment scheduling, and electronic medical records with enhanced security and compliance features.</p>
                         </div>
                     </div>
                 </article>
@@ -899,7 +877,7 @@
                             <h3 class="text-xl font-bold text-[#454452]">Financial Analytics Dashboard</h3>
                         </div>
                         <div class="px-6 py-6">
-                            <p class="text-[#454452] p-4 text-sm leading-relaxed">A sophisticated data visualization platform that provides real-time financial insights, risk assessment, and predictive analytics for investment firms.</p>
+                            <p class="text-[#454452] p-4 text-md leading-relaxed">A sophisticated data visualization platform that provides real-time financial insights, risk assessment, and predictive analytics for investment firms.</p>
                         </div>
                     </div>
                 </article>
@@ -929,7 +907,7 @@
                             <h3 class="text-xl font-bold text-[#454452]">Small Supply Chain Solution</h3>
                         </div>
                         <div class="px-6 py-6">
-                            <p class="text-[#454452] p-4 text-sm leading-relaxed">An end-to-end supply chain management system with integration, real-time tracking and predictive maintenance capabilities.</p>
+                            <p class="text-[#454452] p-4 text-md leading-relaxed">An end-to-end supply chain management system with integration, real-time tracking and predictive maintenance capabilities.</p>
                         </div>
                     </div>
                 </article>
@@ -944,7 +922,7 @@
                             <h3 class="text-xl font-bold text-[#454452]">Business Intelligence Suite</h3>
                         </div>
                         <div class="px-6 py-6">
-                            <p class="text-[#454452] p-4 text-sm leading-relaxed">A comprehensive BI platform that transforms raw data into actionable insights with advanced data mining and machine learning capabilities.</p>
+                            <p class="text-[#454452] p-4 text-md leading-relaxed">A comprehensive BI platform that transforms raw data into actionable insights with advanced data mining and machine learning capabilities.</p>
                         </div>
                     </div>
                 </article>
@@ -987,5 +965,9 @@
     </div>
 </section>
 
+<style>
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
 
 @endsection

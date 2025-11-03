@@ -3,6 +3,7 @@
 // routes/web.php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InternshipRegistrationController;
 use App\Http\Controllers\ContactController;
 
 /*
@@ -56,6 +57,8 @@ Route::get('/project', function () {
     return view('project');
 })->name('project');
 
-
+// internship registration
+Route::post('/internship/register', [InternshipRegistrationController::class, 'store'])
+    ->name('internship.register');
 
 Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact.submit');

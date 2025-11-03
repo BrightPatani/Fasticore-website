@@ -144,7 +144,7 @@
             x-transition:leave="transition ease-in duration-200"
             x-transition:leave-start="translate-x-0 opacity-100"
             x-transition:leave-end="translate-x-full opacity-0"
-            class="lg:hidden fixed top-0 right-0 bottom-0 h-full w-1/2 bg-[#FFFFFF]/60 backdrop-blur-lg z-10 shadow-lg"
+            class="lg:hidden fixed top-0 right-0 bottom-0 pb-[180%] w-1/2 bg-[#FFFFFF]/60 backdrop-blur-lg z-70 shadow-lg"
             style="padding-top: 80px;"
         >
         <!-- Close Button -->
